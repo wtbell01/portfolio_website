@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root{
+  --black:#1d1d1d;
+  --slate-grey:#373939;
+  --dark-grey:#333333;
+  --medium-dark-grey:#ccc;
+  --medium-grey:#e1e4e8;
+  --light-grey:#f7f7f7;
+  --white:#fff;
+  --dark-blue:#337ab7;
+  --red:#eb5352;
+}
+
+/*Showcase*/
+.projects-showcase{
+  background-image:url('/img/laptop.jpg') ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+
+.projects-showcase::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, .8);
+}
+
+.projects-showcase-text-overlay{
+  color: var(--white);
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-showcase-text{
+  z-index: 1;
+}
+
+.projects-showcase-text-top{
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: .08rem;
+}
+
+.projects-showcase-text-bottom{
+  font-size: 1.4rem;
+  margin: 1.3rem 0 2rem 0;
+}
+
+.projects-title{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--dark-grey);
+  margin: 3rem 0;
+  letter-spacing: .05rem;
+}
+
+.projects-container{
+  display: flex;
+  flex-direction: column;
+  width: 87%;
+  margin: 0 auto 8rem auto;
+}
+
+/*Individual project box*/
+.project-box{
+  display: flex;
+  border: solid var(--medium-dark-grey) 1.8px;
+  border-bottom: none;
+  height: 70vh;
+}
+
+.project-box:last-child{
+  border-bottom: solid var(--medium-dark-grey) thin;
+}
+
+.project-image-container{
+  width: 60%;
+  height: 100%;
+}
+.project-image-container img{
+  width: 100%;
+  height: 100%;
+}
+
+/*Project Description Side*/
+.project-description-container{
+  width: 40%;
+  padding: 0 2rem 0 1.5rem;
+}
+
+.project-top{
+  color: var(--black);
+}
+.project-top::after{
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: .7rem;
+  border-bottom: solid var(--medium-dark-grey) thin;
+}
+
+.project-title{
+  margin-top: 3rem;
+  font-size: 2rem;
+  letter-spacing: .06rem;
+}
+
+.project-languages{
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.project-bottom{
+  color: var(--black);
+}
+
+.project-overview-title{
+  margin: 1rem 0 .5rem 0;
+  
+}
+
+.project-overview-container{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.project-button{
+  color: var(--slate-grey);
+  border: solid var(--slate-grey) 2px;
+  padding: .3rem 1.1rem;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+.project-button:hover{
+  background-color: var(--slate-grey);
+  color: var(--white);
+}

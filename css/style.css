@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  line-height: 1.6rem;
+  letter-spacing: .02rem;
+  overflow-x: hidden;
+  max-width: 100%;
+  font-family: 'Oswald', sans-serif;
+}
+
+:root{
+  --slate-grey:#373939;
+  --dark-grey:#333333;
+  --medium-grey:#e1e4e8;
+  --light-grey:#f7f7f7;
+  --white:#fff;
+  --dark-blue:#337ab7;
+  --red:#eb5352;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+/*Header*/
+.header{
+  background-color: var(--slate-grey);
+  position: sticky;
+  z-index: 2;
+  top: 0;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.header-logo-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header-logo{
+  color: var(--white);
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.header-logo-top{
+  
+}
+
+.header-logo-bottom{
+  font-size: 1.2rem; 
+}
+
+.header-menu{
+  display: flex;
+}
+
+.header-menu a{
+  color: var(--white);
+  margin:0 1rem;
+  text-transform: uppercase;
+}
+
+.header-menu a:hover{
+  color: var(--dark-blue);
+}
+
+/*Showcase*/
+.showcase{
+  background-image:url('/img/laptop.jpg') ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+
+.showcase::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, .8);
+}
+
+.showcase-text-overlay{
+  color: var(--white);
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-text{
+  z-index: 1;
+}
+
+.showcase-text-top{
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: .08rem;
+}
+
+.showcase-text-bottom{
+  font-size: 1.4rem;
+  margin: 1.3rem 0 2rem 0;
+}
+
+/*Button*/
+.button{
+  font-size: 1.3rem;
+  color: var(--white);
+  border: solid var(--white) 2px;
+  padding: .7rem 1.2rem;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.home-title{
+  margin: 4rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.home-title::after{
+  content: "";
+  display: block;
+  width: 3.5%;
+  margin: 0 auto;
+  padding-top: .5rem ;
+  border-bottom: solid var(--red) 3px;
+}
+
+/*Project section*/
+.home-project-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1.5rem;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.home-project{
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.home-project::after{
+  content: "";
+  display: block;
+  background-color: rgba(235,83,82,.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%) translateY(-100%);
+  transition: transform 1.5s;
+}
+
+/*Bring in main color overlay*/
+  .home-project:hover:after {
+    transform:translateX(0) translateY(0);
+    
+  }
+
+
+.home-project-image-container{
+  
+}
+
+.home-project-image-container img{
+  height: 100%;
+  width: 100%; 
+}
+
+.home-project-text-container{
+  position: absolute;
+  top:50%;
+  width: 100%;
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+
+.home-project:hover .home-project-text-container{
+  visibility: visible;
+  z-index: 1;
+}
+
+.home-project-text-top{
+ 
+}
+
+.home-project-text-bottom{
+  font-size: 1.5rem;
+}
+
+/*Resume Section*/
+.home-resume-section{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--light-grey);
+  padding-bottom: 3rem;
+}
+
+.home-resume-section i{
+  font-size: 7rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-grey);
+}
+
+.home-resume-text-container{
+  color: var(--dark-grey);
+}
+
+.home-resume-big-text{
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.home-resume-small-text{
+  font-size: 1.3rem;
+  margin-bottom: .6rem;
+}
+
+.home-resume-button{
+  width: 15%;
+  margin: 1rem auto 0 auto;
+  background-color: var(--dark-grey);
+}
+
+/*Requirement Documentation Section*/
+.home-requirement-container{
+  display: flex;
+  width: 95%;
+  margin: 2rem auto;
+  justify-content: space-between;
+}
+
+.home-requirement-box{
+  text-align: center;
+  padding: 3rem;
+  border: solid var(--medium-grey) thin;
+  box-shadow: 0 0 7px var(--medium-grey);
+}
+
+.home-requirement-box i{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-requirement-box-title{
+  font-size: 1.2rem;
+  margin-bottom: .6rem;
+}
+
+.home-requirement-description{
+  width: 70%;
+  margin: 0 auto 1rem auto;
+}
+
+.home-requirement-button{
+  background-color: var(--dark-grey);
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+}
+
+/*Contact Section*/
+.home-contact-section{
+  background-color: var(--light-grey); 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.home-contact-title{
+  
+
+}
+
+.home-contact-info{
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.home-contact-phone{
+  margin-bottom: .5rem;
+}
+
+/*Footer*/
+.footer{
+  text-align: center;
+  background-color: var(--slate-grey);
+  color: var(--white);
+  padding: .5rem 0;
+}
+
+
+

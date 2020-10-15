@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root{
+  --slate-grey:#373939;
+  --dark-grey:#333333;
+  --medium-grey:#e1e4e8;
+  --light-grey:#f7f7f7;
+  --white:#fff;
+  --dark-blue:#337ab7;
+  --red:#eb5352;
+}
+
+/*Showcase*/
+.about-showcase{
+  background-image:url('/img/laptop.jpg') ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+
+.about-showcase::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, .8);
+}
+
+.about-showcase-text-overlay{
+  color: var(--white);
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-showcase-text{
+  z-index: 1;
+}
+
+.about-showcase-text-top{
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: .08rem;
+}
+
+.about-showcase-text-bottom{
+  font-size: 1.4rem;
+  margin: 1.3rem 0 2rem 0;
+}
+
+.about-title{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--dark-grey);
+  margin: 3rem 0;
+  letter-spacing: .05rem;
+}
+
+.about-title::after{
+  content: "";
+  display: block;
+  width: 3%;
+  margin: 0 auto;
+  padding-top: .75rem;
+  border-bottom: solid var(--red) 3.5px;
+}
+
+.about-text-container{
+  width: 75%;
+  margin: 1rem auto 8rem auto;
+  text-align: center;
+}
+
+.about-text{
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  color: var(--dark-grey);
+}
+
+/*Skills Section*/
+.about-skills-background{
+  background-color: var(--dark-grey);
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+
+.about-skills-title{
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 2rem;
+}
+
+.about-skills-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+.about-skill-box{
+  text-align: center;
+}
+
+.skill-category{
+  color: var(--medium-grey);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: .07rem;
+}
+
+.about-skills-list{
+  margin-top: .5rem;
+  
+}
+
+.about-skills-list li{
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: .7rem;
+}

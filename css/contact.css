@@ -1,0 +1,163 @@
+:root{
+  --slate-grey:#373939;
+  --dark-grey:#333333;
+  --medium-grey:#e1e4e8;
+  --light-grey:#f7f7f7;
+  --white:#fff;
+  --dark-blue:#337ab7;
+  --red:#eb5352;
+}
+
+/*Showcase*/
+.contact-showcase{
+  background-image:url('/img/laptop.jpg') ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+
+.contact-showcase::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, .8);
+}
+
+.contact-showcase-text-overlay{
+  color: var(--white);
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-showcase-text{
+  z-index: 1;
+}
+
+.contact-showcase-text-top{
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: .08rem;
+}
+
+.contact-showcase-text-bottom{
+  font-size: 1.4rem;
+  margin: 1.3rem 0 2rem 0;
+}
+
+.contact-title{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--dark-grey);
+  margin: 3rem 0;
+  letter-spacing: .05rem;
+}
+
+.contact-title::after{
+  content: "";
+  display: block;
+  width: 3%;
+  margin: 0 auto;
+  border-bottom: solid var(--red) 3px;
+  padding-top: 1rem;
+}
+
+.personal-contact-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.personal-contact-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-contact-box i{
+  font-size: 2.5rem;
+  color: var(--slate-grey);
+  margin-bottom: 2rem;
+}
+
+.personal-contact-category{
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: .5rem;
+  color: var(--slate-grey);
+}
+
+.personal-contact-info{
+  font-size: 1rem;
+  color: var(--slate-grey);
+}
+
+/*Contact Form*/
+.contact-form{
+  display: grid;
+  grid-template-areas: 
+  'name email'
+  'subject phone'
+  'message message'
+  'submit-button submit-button';
+  width: 75%;
+  margin: 5rem auto 8rem auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+
+}
+
+.name,
+.email,
+.subject,
+.phone{
+  font-size: 1rem;
+  padding: 1rem 0 1rem .5rem;
+}
+
+.message{
+  font-size: 1rem;
+  padding: .5rem 0 10rem .5rem;
+}
+
+.submit-button{
+  width: 30%;
+  margin: 0 auto;
+  padding: .5rem 0;
+  text-transform: uppercase;
+}
+
+.name{
+  grid-area: name;
+}
+
+.email{
+  grid-area: email;
+}
+
+.subject{
+  grid-area: subject;
+}
+
+.phone{
+  grid-area: phone;
+}
+
+.message{
+  grid-area: message;
+}
+
+.submit-button{
+  grid-area: submit-button;
+}
