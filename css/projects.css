@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
 
 :root{
   --black:#1d1d1d;
@@ -18,7 +19,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 60vh;
   position: relative;
 }
 
@@ -45,17 +46,9 @@
 
 .projects-showcase-text{
   z-index: 1;
-}
-
-.projects-showcase-text-top{
   text-transform: uppercase;
   font-size: 2.4rem;
   letter-spacing: .08rem;
-}
-
-.projects-showcase-text-bottom{
-  font-size: 1.4rem;
-  margin: 1.3rem 0 2rem 0;
 }
 
 .projects-title{
@@ -67,19 +60,28 @@
   letter-spacing: .05rem;
 }
 
+.projects-title::after{
+  content: "";
+  display: block;
+  width: 3%;
+  margin: 0 auto;
+  border-bottom: solid var(--red) 3px;
+  padding-top: 1rem;
+}
+
 .projects-container{
   display: flex;
   flex-direction: column;
   width: 87%;
-  margin: 0 auto 8rem auto;
+  margin: 4rem auto 8rem auto;
 }
 
 /*Individual project box*/
 .project-box{
   display: flex;
-  border: solid var(--medium-dark-grey) 1.8px;
+  border: solid var(--medium-dark-grey) 2px;
   border-bottom: none;
-  height: 70vh;
+  height: 62vh;
 }
 
 .project-box:last-child{
@@ -114,14 +116,15 @@
 
 .project-title{
   margin-top: 3rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   letter-spacing: .06rem;
 }
 
 .project-languages{
-  font-size: 1.15rem;
+  font-size: 1rem;
   text-transform: uppercase;
   margin-top: 2rem;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .project-bottom{
@@ -130,7 +133,7 @@
 
 .project-overview-title{
   margin: 1rem 0 .5rem 0;
-  
+  font-family: 'Open Sans', sans-serif;
 }
 
 .project-overview-container{
@@ -138,15 +141,223 @@
   margin-bottom: 2rem;
 }
 
+.project-overview-text{
+  font-size: 1rem;
+  margin-top: .5rem;
+  line-height: 1.8rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .project-button{
   color: var(--slate-grey);
   border: solid var(--slate-grey) 2px;
-  padding: .3rem 1.1rem;
+  border-radius: 4px;
+  padding: .25rem 1.1rem;
   text-transform: uppercase;
-  font-size: .9rem;
+  font-size: .95rem;
+  letter-spacing: .05rem;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
 }
 
 .project-button:hover{
   background-color: var(--slate-grey);
   color: var(--white);
+}
+
+@media(max-width:1200px){
+  .projects-container{
+    width: 100%;
+  }
+
+  /*Individual project box*/
+  .project-box{
+    border: none;
+    height:60vh;
+  }
+
+  /*Individual project box*/
+  .project-box:first-child{
+    border-top: solid var(--medium-dark-grey) thin;
+  }
+
+  .project-title{
+    font-size: 1.4rem;
+  }
+  
+  .project-languages{
+    font-size: .85rem;
+  }
+
+  .project-overview-container{
+    margin-bottom: 1.5rem;
+  }
+
+  .project-overview-title{
+    font-size: .85rem;
+  }
+
+  .project-overview-text{
+    font-size: .9rem;
+    line-height: 1.3rem;
+  }
+
+  .project-button{
+    font-size: .8rem;
+  }
+
+}
+
+
+@media(max-width:900px){
+  .projects-showcase-text{
+    font-size: 1.95rem;
+  }
+
+  .projects-title{
+    font-size: 1.5rem;
+  }
+
+  /*Individual project box*/
+  .project-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin-bottom:20rem;
+  }
+
+  .project-box-2{
+    margin-bottom: 7rem;
+  }
+
+  /*Reverse the column on even boxes*/
+  .project-box:nth-child(even){
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .project-image-container{
+    width: 100%;
+    height: 65vh;
+  }
+
+  .project-image-container img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  /*Project Description Side*/
+  .project-description-container{
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+  }
+}
+
+@media(max-width:750px){
+  .project-image-container{
+    height: 60vh;
+  }
+}
+
+@media(max-width:415px){
+  /*Individual project box*/
+  .project-box{
+    margin-bottom:0rem;
+    height: 90vh;
+  }
+
+  .project-box-2{
+    margin-bottom: 7rem;
+  }
+
+  .project-image-container{
+    height: 45vh;
+  }
+
+  .project-title{
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+  }
+
+  .project-languages{
+    margin-top: 1rem;
+  }
+  
+  .project-bottom{
+    color: var(--black);
+  }
+  
+  .project-overview-title{
+    margin: .5rem 0;
+  }
+  
+  .project-overview-container{
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-overview-text{
+    font-size: .8rem;
+    margin-top: 0;
+  }
+  
+  .project-button{
+    font-size: .75rem;
+  }
+}
+
+
+@media(max-width:375px){
+  /*Individual project box*/
+  .project-box{
+    margin-bottom:0rem;
+    height: 90vh;
+  }
+
+  .project-box-2{
+    margin-bottom: 7rem;
+  }
+
+  .project-image-container{
+    height: 40vh;
+  }
+
+  .project-title{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+
+  .project-overview-text{
+    line-height: 1.6rem;
+  }
+}
+
+@media(max-width:320px){
+  .project-image-container{
+    height: 35vh;
+  }
+ 
+
+  .project-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  .project-languages{
+    font-size: .8rem;
+  }
+
+  .project-overview-title{
+    font-size: .8rem;
+  }
+
+  .project-overview-text{
+    font-size: .7rem;
+  }
+
+  .project-button{
+    font-size: .7rem;
+  }
 }

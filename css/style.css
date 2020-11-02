@@ -32,12 +32,29 @@ li{
   list-style: none;
 }
 
+/*Button*/
+.button{
+  font-size: 1.3rem;
+  color: var(--white);
+  border-radius: 4px;
+  padding: .5rem 1.2rem;
+  text-transform: uppercase;
+  z-index: 1;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+
+/*Button*/
+.button:hover{
+  background-color: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+}
+
 /*Header*/
 .header{
   background-color: var(--slate-grey);
-  position: sticky;
-  z-index: 2;
-  top: 0;
+ 
 }
 
 .header-container{
@@ -59,27 +76,33 @@ li{
   color: var(--white);
   text-transform: uppercase;
   font-style: italic;
+  transition-duration: .2s;
 }
 
 .header-logo-top{
-  
+  font-size: 1.8rem;
 }
 
 .header-logo-bottom{
-  font-size: 1.2rem; 
+  font-size: 1.6rem; 
 }
 
 .header-menu{
   display: flex;
 }
 
-.header-menu a{
+.header-menu-link{
   color: var(--white);
   margin:0 1rem;
   text-transform: uppercase;
+  transition-duration: .2s;
 }
 
-.header-menu a:hover{
+.header-menu-link:hover{
+  color: var(--dark-blue);
+}
+
+.header-menu-active{
   color: var(--dark-blue);
 }
 
@@ -106,7 +129,7 @@ li{
 .showcase-text-overlay{
   color: var(--white);
   height: 100%;
-  width: 60%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -120,29 +143,25 @@ li{
 
 .showcase-text-top{
   text-transform: uppercase;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   letter-spacing: .08rem;
 }
 
 .showcase-text-bottom{
-  font-size: 1.4rem;
-  margin: 1.3rem 0 2rem 0;
+  font-size: 1.7rem;
+  margin: 2.2rem 0 2rem 0;
 }
 
-/*Button*/
-.button{
-  font-size: 1.3rem;
+.showcase-button{
   color: var(--white);
   border: solid var(--white) 2px;
-  padding: .7rem 1.2rem;
-  text-transform: uppercase;
-  z-index: 1;
 }
 
 .home-title{
-  margin: 4rem 0;
+  margin-top: 4rem;
   text-align: center;
   text-transform: uppercase;
+  font-size: 1.65rem;
 }
 
 .home-title::after{
@@ -160,7 +179,7 @@ li{
   grid-template-columns: repeat(2,1fr);
   grid-gap: 1.5rem;
   width: 80%;
-  margin: 2rem auto;
+  margin: 4rem auto 4.5rem auto;
 }
 
 .home-project{
@@ -169,28 +188,27 @@ li{
   overflow: hidden;
 }
 
-.home-project::after{
-  content: "";
-  display: block;
-  background-color: rgba(235,83,82,.9);
+.home-project::before{
   position: absolute;
+  content: '';
+  display: block;
+  background:rgba(0,0,0,0.8);
+  top:0;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  transform: translateX(-100%) translateY(-100%);
-  transition: transform 1.5s;
+  opacity: 0;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
 }
 
-/*Bring in main color overlay*/
-  .home-project:hover:after {
-    transform:translateX(0) translateY(0);
-    
-  }
-
+.home-project:hover::before{
+  opacity: 1;
+}
 
 .home-project-image-container{
-  
+  height: 50vh;
+  width: 100%;
 }
 
 .home-project-image-container img{
@@ -200,25 +218,43 @@ li{
 
 .home-project-text-container{
   position: absolute;
-  top:50%;
+  top:40%;
   width: 100%;
   color: var(--white);
   text-align: center;
   text-transform: uppercase;
   visibility: hidden;
+  transition-duration: .4s;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+  opacity: 0;
 }
 
 .home-project:hover .home-project-text-container{
   visibility: visible;
   z-index: 1;
+  opacity: 1;
 }
 
 .home-project-text-top{
- 
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
 }
 
 .home-project-text-bottom{
-  font-size: 1.5rem;
+  font-size: 1.15rem;
+  margin-bottom: 1.45rem;
+  color: var(--medium-grey);
+}
+
+.home-project-button{
+  text-transform: uppercase;
+  color: var(--slate-grey);
+  background-color: var(--white);
+  border: solid var(--white) thin;
+  border-radius: 4px;
+  padding: .35rem .85rem;
+  font-size: 1rem;
 }
 
 /*Resume Section*/
@@ -227,12 +263,12 @@ li{
   flex-direction: column;
   text-align: center;
   background-color: var(--light-grey);
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
 }
 
-.home-resume-section i{
-  font-size: 7rem;
-  margin-bottom: 1.5rem;
+.home-resume-icon-container i{
+  font-size: 8rem;
+  margin: 2rem 0;
   color: var(--dark-grey);
 }
 
@@ -241,78 +277,60 @@ li{
 }
 
 .home-resume-big-text{
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
 }
 
 .home-resume-small-text{
   font-size: 1.3rem;
-  margin-bottom: .6rem;
+  margin-bottom: .8rem;
 }
 
 .home-resume-button{
-  width: 15%;
+  display: inline-block;
+  
   margin: 1rem auto 0 auto;
   background-color: var(--dark-grey);
+  
 }
 
 /*Requirement Documentation Section*/
 .home-requirement-container{
   display: flex;
-  width: 95%;
-  margin: 2rem auto;
   justify-content: space-between;
+  width: 95%;
+  margin: 3rem auto 9rem auto;
 }
 
 .home-requirement-box{
   text-align: center;
   padding: 3rem;
   border: solid var(--medium-grey) thin;
-  box-shadow: 0 0 7px var(--medium-grey);
+  box-shadow: 0 0 4px var(--medium-grey);
+  color: var(--slate-grey);
 }
 
 .home-requirement-box i{
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 4.2rem;
+  margin-bottom: 1.15rem;
 }
 
 .home-requirement-box-title{
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: .6rem;
 }
 
 .home-requirement-description{
   width: 70%;
-  margin: 0 auto 1rem auto;
+  margin: 1.2rem auto 1.95rem auto;
+  font-size: 1.2rem;
 }
 
 .home-requirement-button{
-  background-color: var(--dark-grey);
+  background-color: var(--slate-grey);
   border-radius: 10px;
-  padding: .5rem 1rem;
+  padding: .35rem 1.25rem;
   font-size: 1rem;
-}
-
-/*Contact Section*/
-.home-contact-section{
-  background-color: var(--light-grey); 
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.home-contact-title{
-  
-
-}
-
-.home-contact-info{
-  padding-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.home-contact-phone{
-  margin-bottom: .5rem;
 }
 
 /*Footer*/
@@ -322,6 +340,249 @@ li{
   color: var(--white);
   padding: .5rem 0;
 }
+
+@media(max-width:1100px){
+  /*Resume section*/
+  .home-resume-icon-container i{
+    font-size: 6rem;
+  }
+  
+  .home-resume-big-text{
+    font-size: 1.5rem;
+    margin-bottom: 1.4rem;
+  }
+  
+  .home-resume-small-text{
+    font-size: 1.2rem;
+    margin-bottom: .8rem;
+  }
+  
+  .home-resume-button{
+    font-size: 1rem;
+  } 
+}
+
+@media(max-width:900px){
+  /*header*/
+  .header-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-menu-link{
+    margin:0 2rem 0 0;
+  }
+
+  .header-logo-container{
+    text-align: justify;
+    margin-bottom: 1rem;
+  }
+
+  .header-logo-top{
+    font-size: 1.8rem;
+    position: relative;
+    right: 1.5rem;
+  }
+  
+  .header-logo-bottom{
+    font-size: 1.6rem; 
+    
+  }
+
+  /*Project section*/
+  .home-project-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-row-gap: 1.5rem;
+    width: 97%;
+    margin: 4rem auto 4.5rem auto;
+  }
+
+  .home-project{
+    height: 75vh;
+  }
+
+  .home-project-image-container{
+    height: 75vh;
+  }
+
+  /*Requirement Documentation Section*/
+  .home-requirement-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+
+  .home-requirement-box{
+    margin-bottom: 1rem;
+  }
+
+}
+
+@media(max-width:640px){
+
+  .showcase-text-top{
+    font-size: 2.2rem;
+    margin: 0 0 1.45rem 0;
+  }
+
+  .showcase-text-bottom{
+    font-size: 1.55rem;
+    margin: 0 0 1.45rem 0;
+  }
+
+  .header-menu-link{
+    font-size: .95rem;
+    margin:0 1rem 0 0;
+  }
+
+  .home-resume-big-text{
+    font-size: 1.15rem;
+  }
+
+  .home-resume-small-text{
+    font-size: 1rem;
+  }
+}
+
+/*Media Query 415px*/
+@media(max-width:415px){
+  .header-logo-container{
+    text-align: center;
+  }
+
+  .header-logo-top{
+    font-size: 1.6rem;
+    position: unset;
+  }
+
+  .header-logo-bottom{
+    font-size: 1.4rem;
+  }
+
+  .header-menu-link{
+    font-size: .75rem;
+    margin-right: .75rem;
+  }
+  /*Showcase*/
+  .showcase{
+    height: 45vh;
+  }
+
+  .showcase-text-top{
+    margin: 0 0 .75rem 0;
+    font-size: 1.65rem;
+  }
+  
+  .showcase-text-bottom{
+    font-size: 1.2rem;
+    margin: 0 0 .75rem 0;
+  }
+  
+  .showcase-button{
+    font-size: 1rem;
+    padding: .35rem .75rem;
+  }
+  
+  /*Titles on home page*/
+  .home-title{
+    font-size: 1.25rem;
+  }
+  
+  .home-title::after{
+    width: 7.5%;
+  }
+  
+  /*home project section*/
+  .home-project{
+    height: 40vh;
+  }
+
+  .home-project::before{
+    background:rgba(0,0,0,0.6);
+    opacity: 1;
+  }
+
+  .home-project-image-container{
+    height: 40vh;
+  }
+
+  .home-project-text-container{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .home-project-text-top{
+    font-size: 1.7rem;
+    margin-bottom: .5rem;
+  }
+  
+  .home-project-text-bottom{
+    font-size: .95rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-project-button{
+    font-size: .8rem;
+  }
+
+  /*Home Resume section*/
+  .home-resume-icon-container i{
+    font-size: 4rem;
+  }
+  
+  .home-resume-big-text{
+    display: none;
+  }
+  
+  .home-resume-small-text{
+    font-size: 1rem;
+    width: 90%;
+    margin: 0 auto .75rem auto;
+  }
+  
+  .home-resume-button{
+    font-size: .85rem;
+  } 
+
+  /*home requirement section*/
+  .home-requirement-container{
+    width: 90%;
+  }
+
+  .home-requirement-box i{
+    font-size: 3.2rem;
+  }
+  
+  .home-requirement-box-title{
+    font-size: 1.2rem;
+  }
+  
+  .home-requirement-description{
+    font-size: 1rem;
+  }
+  
+  .home-requirement-button{
+    font-size: .9rem;
+  }
+}
+
+@media(max-width:375px){
+  .header-menu-link{
+    font-size: .7rem;
+  }
+}
+
+@media(max-width:320px){
+  .header-menu-link{
+    font-size: .68rem;
+    margin: 0 .35rem 0 0;
+  }
+}
+
+
+
+
 
 
 

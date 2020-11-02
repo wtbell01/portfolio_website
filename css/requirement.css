@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
+
 :root{
   --slate-grey:#373939;
   --dark-grey:#333333;
@@ -14,7 +16,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 60vh;
   position: relative;
 }
 
@@ -41,17 +43,9 @@
 
 .requirement-showcase-text{
   z-index: 1;
-}
-
-.requirement-showcase-text-top{
   text-transform: uppercase;
   font-size: 2.4rem;
   letter-spacing: .08rem;
-}
-
-.requirement-showcase-text-bottom{
-  font-size: 1.4rem;
-  margin: 1.3rem 0 2rem 0;
 }
 
 .requirement-title{
@@ -85,11 +79,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4rem;
 }
 
 .requirement-image-container{
   width: 100%;
-  height: 50vh;
+  height: 65vh;
 }
 
 .requirement-image-container img{
@@ -98,13 +93,86 @@
 }
 
 .requirement-description-title{
-  margin: 1rem 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  margin: 2rem 0 1.5rem 0;
 }
 
 .requirement-description-container{
   text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+}
+
+.requirement-description-button{
+  color: var(--white);
+  background-color: var(--slate-grey);
+  border-radius: 4px;
+  padding: .33rem 1.35rem;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+}
+
+.requirement-description-button:hover{
+  background-color: var(--red);
 }
 
 .use-case-text{
   margin-bottom: .5rem;
 }
+
+@media(max-width:900px){
+  .requirement-showcase-text{
+    font-size: 1.95rem;
+  }
+
+  .requirement-title{
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width:850px){
+
+  .requirement-container{
+    width:95%;
+  }
+
+  .requirement-image-container{
+    height: 55vh;
+  }
+
+  .requirement-description-title{
+    font-size: 1.2rem;
+  }
+  
+  .requirement-description-container{
+    font-size: 1rem;
+  }
+  
+  .requirement-description-button{
+    font-size: .85rem;
+  }
+}
+
+@media(max-width:650px){
+
+  .requirement-image-container{
+    display: none;
+  }
+
+  .requirement-description-title{
+    font-size: 1.2rem;
+  }
+  
+  .requirement-description-container{
+    font-size: 1rem;
+  }
+  
+  .requirement-description-button{
+    font-size: .85rem;
+  }
+}
+

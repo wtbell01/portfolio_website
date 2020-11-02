@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
 
 :root{
   --slate-grey:#373939;
@@ -17,7 +17,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 60vh;
   position: relative;
 }
 
@@ -44,17 +44,9 @@
 
 .resume-showcase-text{
   z-index: 1;
-}
-
-.resume-showcase-text-top{
   text-transform: uppercase;
   font-size: 2.4rem;
   letter-spacing: .08rem;
-}
-
-.resume-showcase-text-bottom{
-  font-size: 1.4rem;
-  margin: 1.3rem 0 2rem 0;
 }
 
 .resume-title{
@@ -80,7 +72,9 @@
   flex-direction: column;
   width: 80%;
   margin: 0 auto 8rem auto;
-  box-shadow: 0 0 3rem rgba(0, 0, 0, .06);
+  border: solid var(--whitesmoke) 1px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .06);
+  font-family: 'Open Sans', sans-serif;
 }
 
 .resume-title-container{
@@ -88,7 +82,7 @@
   color: var(--dark-grey);
   text-align: center;
   padding: 2rem 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: 'Lato', sans-serif;
   margin: 4rem 0 1rem 0;
 }
@@ -100,35 +94,36 @@
 .education-container,
 .skills-container,
 .experience-container{
-  margin-left: 1.5rem;
+  margin: 1.5rem 0 0 1.5rem;
 }
 
 .education-text{
+  font-size: .92rem;
   margin-bottom: .75rem;
 }
 
 .text-dark{
   font-weight: bold;
+  font-style: italic;
 }
 
 /*Skills section*/
 .skills-category{
   font-weight: bold;
+  font-style: italic;
   margin-right: .5rem;
 }
 
 .skills-list{
   margin-bottom: .5rem;
-  font-size: 1rem;
+  font-size: .92rem;
 }
-
-/*work experience*/
-.experience-container
 
 .experience-box{
   border-bottom: solid var(--slate-grey) thin;
-  padding-bottom: .5rem;
-  margin-bottom: .75rem;
+  margin: 1.5rem 0 0 0;
+  padding-bottom: 1.5rem;
+  font-size: .92rem;
 }
 
 .experience-box:last-child{
@@ -136,6 +131,7 @@
 }
 .experience-dark-text{
   font-weight: bold;
+  font-style: italic;
 }
 
 .work-duties-list{
@@ -145,4 +141,32 @@
 .work-duties-list li{
   list-style: square;
   margin-bottom: .2rem;
+}
+
+@media(max-width:900px){
+  .resume-showcase-text{
+    font-size: 1.95rem;
+  }
+
+  .resume-title{
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width:600px){
+  .resume-container{
+    width: 80%;
+  }
+
+  .education-container,
+  .skills-container,
+  .experience-container{
+    padding: 0 1rem;
+  }
+}
+
+@media(max-width:415px){
+  .resume-container{
+    width: 100%;
+  }
 }

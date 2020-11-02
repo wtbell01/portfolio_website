@@ -16,7 +16,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 60vh;
   position: relative;
 }
 
@@ -43,17 +43,9 @@
 
 .about-showcase-text{
   z-index: 1;
-}
-
-.about-showcase-text-top{
   text-transform: uppercase;
   font-size: 2.4rem;
   letter-spacing: .08rem;
-}
-
-.about-showcase-text-bottom{
-  font-size: 1.4rem;
-  margin: 1.3rem 0 2rem 0;
 }
 
 .about-title{
@@ -76,21 +68,20 @@
 
 .about-text-container{
   width: 75%;
-  margin: 1rem auto 8rem auto;
+  margin: 1rem auto 13rem auto;
   text-align: center;
 }
 
 .about-text{
   font-size: 1.3rem;
-  line-height: 2.3rem;
+  line-height: 3rem;
   color: var(--dark-grey);
 }
 
 /*Skills Section*/
 .about-skills-background{
   background-color: var(--dark-grey);
-  padding-bottom: 3rem;
-  margin-bottom: 3rem;
+  padding-bottom: 8rem;
 }
 
 .about-skills-title{
@@ -105,7 +96,6 @@
   grid-template-columns: repeat(3,1fr);
   width: 80%;
   margin: 0 auto;
-
 }
 
 .about-skill-box{
@@ -129,4 +119,70 @@
   text-transform: uppercase;
   font-size: 1rem;
   margin-bottom: .7rem;
+}
+
+@media(max-width:900px){
+
+  .about-showcase-text{
+    font-size: 1.95rem;
+  }
+
+  .about-title{
+    font-size: 1.5rem;
+  }
+  
+  .about-text-container{
+    width: 90%;
+  }
+
+  .about-text{
+    font-size: 1.1rem;
+  }
+
+  .about-skills-title{
+    font-size: 1.7rem;
+  }
+
+  .about-skills-container{
+    width: 100%;
+  }
+  
+  .skill-category{
+    font-size: 1.1rem;
+  }
+  
+  .about-skills-list{
+    margin-top: .5rem;
+    
+  }
+  
+  .about-skills-list li{
+    font-size: .95rem;
+  }
+
+}
+
+@media(max-width:415px){
+  .about-title{
+    font-size: 1.45rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .about-title::after{
+    width: 10%;
+  }
+
+  .about-text{
+    font-size: .97rem;
+    line-height: 2.2rem;
+  }
+
+  .about-skills-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .about-skill-box{
+    margin-bottom: 1.5rem;
+  }
+
 }
