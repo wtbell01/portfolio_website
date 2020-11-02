@@ -146,14 +146,14 @@ li{
   font-size: 2.5rem;
   letter-spacing: .08rem;
   animation-name: moveToRight;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 
 .showcase-text-bottom{
   font-size: 1.7rem;
   margin: 2.2rem 0 2rem 0;
   animation-name: moveToLeft;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 
 .showcase-button{
@@ -165,11 +165,11 @@ li{
 @keyframes moveToRight{
   0%{
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-150px);
   }
 
   80%{
-    transform: translateX(10px);
+    transform: translateX(25px);
   }
 
   100%{
@@ -181,11 +181,11 @@ li{
 @keyframes moveToLeft{
   0%{
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(150px);
   }
 
   80%{
-    transform: translateX(-10px);
+    transform: translateX(-25px);
   }
 
   100%{
