@@ -145,11 +145,15 @@ li{
   text-transform: uppercase;
   font-size: 2.5rem;
   letter-spacing: .08rem;
+  animation-name: moveToRight;
+  animation-duration: 2s;
 }
 
 .showcase-text-bottom{
   font-size: 1.7rem;
   margin: 2.2rem 0 2rem 0;
+  animation-name: moveToLeft;
+  animation-duration: 2s;
 }
 
 .showcase-button{
@@ -157,6 +161,40 @@ li{
   border: solid var(--white) 2px;
 }
 
+/*Keyframes that bring showcase text in from the left and right*/
+@keyframes moveToRight{
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80%{
+    transform: translateX(10px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveToLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80%{
+    transform: translateX(-10px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*Titles for each section/category on the home page*/
 .home-title{
   margin-top: 4rem;
   text-align: center;
@@ -164,6 +202,7 @@ li{
   font-size: 1.65rem;
 }
 
+/*Red underline underneath the title*/
 .home-title::after{
   content: "";
   display: block;
@@ -288,10 +327,8 @@ li{
 
 .home-resume-button{
   display: inline-block;
-  
   margin: 1rem auto 0 auto;
   background-color: var(--dark-grey);
-  
 }
 
 /*Requirement Documentation Section*/
@@ -420,7 +457,6 @@ li{
 }
 
 @media(max-width:640px){
-
   .showcase-text-top{
     font-size: 2.2rem;
     margin: 0 0 1.45rem 0;
