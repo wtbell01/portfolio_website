@@ -1,3 +1,5 @@
+/*Media queries for index.html start on line 389*/
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 *{
@@ -78,11 +80,11 @@ li{
   font-style: italic;
   transition-duration: .2s;
 }
-
+/*Text at the top of the logo*/
 .header-logo-top{
   font-size: 1.8rem;
 }
-
+/*Text at the bottom of the logo*/
 .header-logo-bottom{
   font-size: 1.6rem; 
 }
@@ -140,6 +142,7 @@ li{
 .showcase-text{
   z-index: 1;
 }
+
 
 .showcase-text-top{
   text-transform: uppercase;
@@ -221,12 +224,14 @@ li{
   margin: 4rem auto 4.5rem auto;
 }
 
+/*Individual project box*/
 .home-project{
   position: relative;
   height: 50vh;
   overflow: hidden;
 }
 
+/*add a black background color to the project box*/
 .home-project::before{
   position: absolute;
   content: '';
@@ -241,6 +246,7 @@ li{
   transition-property: all;
 }
 
+/*Display background color on the project box while hovering*/
 .home-project:hover::before{
   opacity: 1;
 }
@@ -269,6 +275,7 @@ li{
   opacity: 0;
 }
 
+/*Display the text on the project while hovering over the project*/
 .home-project:hover .home-project-text-container{
   visibility: visible;
   z-index: 1;
@@ -305,6 +312,7 @@ li{
   padding-bottom: 6rem;
 }
 
+/*Resume font awesome icon*/
 .home-resume-icon-container i{
   font-size: 8rem;
   margin: 2rem 0;
@@ -339,6 +347,7 @@ li{
   margin: 3rem auto 9rem auto;
 }
 
+/*Individual requirement box*/
 .home-requirement-box{
   text-align: center;
   padding: 3rem;
@@ -347,6 +356,7 @@ li{
   color: var(--slate-grey);
 }
 
+/*Icon inside each requirement box*/
 .home-requirement-box i{
   font-size: 4.2rem;
   margin-bottom: 1.15rem;
@@ -378,6 +388,7 @@ li{
   padding: .5rem 0;
 }
 
+/*Media queries for home page/index.html*/
 @media(max-width:1100px){
   /*Resume section*/
   .home-resume-icon-container i{
