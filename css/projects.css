@@ -82,6 +82,7 @@
   border: solid var(--medium-dark-grey) 2px;
   border-bottom: none;
   height: 62vh;
+  padding-bottom: 2rem;
 }
 
 .project-box:last-child{
@@ -223,12 +224,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-    margin-bottom:20rem;
-  }
-
-  .project-box-2{
-    margin-bottom: 7rem;
+    height: auto;
+    margin-bottom:2rem;
   }
 
   /*Reverse the column on even boxes*/
@@ -250,8 +247,6 @@
   /*Project Description Side*/
   .project-description-container{
     width: 100%;
-    padding: 0 2rem;
-    text-align: center;
   }
 }
 
@@ -262,16 +257,6 @@
 }
 
 @media(max-width:415px){
-  /*Individual project box*/
-  .project-box{
-    margin-bottom:0rem;
-    height: 90vh;
-  }
-
-  .project-box-2{
-    margin-bottom: 7rem;
-  }
-
   .project-image-container{
     height: 45vh;
   }
@@ -310,16 +295,6 @@
 
 
 @media(max-width:375px){
-  /*Individual project box*/
-  .project-box{
-    margin-bottom:0rem;
-    height: 90vh;
-  }
-
-  .project-box-2{
-    margin-bottom: 7rem;
-  }
-
   .project-image-container{
     height: 40vh;
   }
@@ -339,7 +314,6 @@
     height: 35vh;
   }
  
-
   .project-title{
     font-size: 1rem;
     text-transform: uppercase;
