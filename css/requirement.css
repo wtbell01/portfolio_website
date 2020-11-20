@@ -46,6 +46,7 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   letter-spacing: .08rem;
+  white-space: nowrap;
 }
 
 .requirement-title{
@@ -130,7 +131,7 @@
   }
 
   .requirement-title{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -158,6 +159,10 @@
 }
 
 @media(max-width:650px){
+
+  .requirement-showcase-text{
+    font-size: 1.4rem;
+  }
 
   .requirement-image-container{
     display: none;
