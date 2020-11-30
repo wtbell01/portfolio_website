@@ -21,6 +21,7 @@
   position: relative;
 }
 
+/*background color on the resume showcase*/
 .resume-showcase::before{
   position: absolute;
   content: "";
@@ -58,6 +59,7 @@
   letter-spacing: .05rem;
 }
 
+/*red underline on the resume title*/
 .resume-title::after{
   content: "";
   display: block;
