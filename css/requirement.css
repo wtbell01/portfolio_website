@@ -70,7 +70,6 @@
 .requirement-container{
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: 1rem;
   width:75%;
   margin: 0 auto;
 }
