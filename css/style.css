@@ -118,6 +118,7 @@ li{
   position: relative;
 }
 
+/*Background color on showcase*/
 .showcase::before{
   position: absolute;
   content: "";
@@ -142,7 +143,6 @@ li{
 .showcase-text{
   z-index: 1;
 }
-
 
 .showcase-text-top{
   text-transform: uppercase;
@@ -441,13 +441,13 @@ li{
   .home-project-container{
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    grid-row-gap: 1.5rem;
     width: 97%;
     margin: 4rem auto 4.5rem auto;
   }
 
   .home-project{
     height: 75vh;
+    margin-bottom: 1.5rem;
   }
 
   .home-project-image-container{
