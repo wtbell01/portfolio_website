@@ -58,6 +58,7 @@
   letter-spacing: .05rem;
 }
 
+/*red underline on the about title*/
 .about-title::after{
   content: "";
   display: block;
