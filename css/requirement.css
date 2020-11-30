@@ -20,6 +20,7 @@
   position: relative;
 }
 
+/*background color on showcase*/
 .requirement-showcase::before{
   position: absolute;
   content: "";
@@ -58,6 +59,7 @@
   letter-spacing: .05rem;
 }
 
+/*red underline on the requirement title*/
 .requirement-title::after{
   content: "";
   display: block;
