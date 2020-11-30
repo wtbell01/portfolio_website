@@ -20,6 +20,7 @@
   position: relative;
 }
 
+/*Background color on showcase*/
 .about-showcase::before{
   position: absolute;
   content: "";
