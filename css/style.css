@@ -349,6 +349,9 @@ li{
 
 /*Individual requirement box*/
 .home-requirement-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 3rem;
   border: solid var(--medium-grey) thin;
