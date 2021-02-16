@@ -83,8 +83,6 @@
   display: flex;
   border: solid var(--medium-dark-grey) 2px;
   border-bottom: none;
-  /* height: 62vh; ---------------------------------------------- */
-  /* padding-bottom: 2rem; */
 }
 
 /*Add a border line at the bottom of the last project box*/
