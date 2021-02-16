@@ -83,18 +83,19 @@
   display: flex;
   border: solid var(--medium-dark-grey) 2px;
   border-bottom: none;
-  height: 62vh;
-  padding-bottom: 2rem;
+  /* height: 62vh; ---------------------------------------------- */
+  /* padding-bottom: 2rem; */
 }
 
 /*Add a border line at the bottom of the last project box*/
 .project-box:last-child{
   border-bottom: solid var(--medium-dark-grey) thin;
+  padding-bottom: 1.5rem;
 }
 
 .project-image-container{
   width: 60%;
-  height: 62vh;
+  height: auto;
 }
 .project-image-container img{
   width: 100%;
@@ -104,7 +105,7 @@
 /*Project Description Side*/
 .project-description-container{
   width: 40%;
-  padding: 0 2rem 0 1.5rem;
+  padding: 0 2rem 1.5rem 1.5rem;
 }
 
 .project-top{
