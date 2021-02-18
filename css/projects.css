@@ -88,7 +88,6 @@
 /*Add a border line at the bottom of the last project box*/
 .project-box:last-child{
   border-bottom: solid var(--medium-dark-grey) thin;
-  padding-bottom: 1.5rem;
 }
 
 .project-image-container{
@@ -232,6 +231,12 @@
     width: 100%;
     height: auto;
     margin-bottom:2rem;
+  }
+
+  /*Add a border line at the bottom of the last project box*/
+  .project-box:last-child{
+    border-bottom: solid var(--medium-dark-grey) thin;
+    padding-bottom: 1.5rem;
   }
 
   /*Reverse the column order on even boxes*/
