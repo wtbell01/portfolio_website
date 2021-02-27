@@ -1,6 +1,6 @@
 /*Media queries for index.html start on line 389*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Spartan&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 *{
   margin: 0;
@@ -13,7 +13,8 @@ body{
   letter-spacing: .02rem;
   overflow-x: hidden;
   max-width: 100%;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif; 
+
 }
 
 :root{
@@ -63,9 +64,9 @@ li{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1.75rem 0;
 }
 
 .header-logo-container{
@@ -95,17 +96,18 @@ li{
 
 .header-menu-link{
   color: var(--white);
-  margin:0 1rem;
+  margin:0 1.5rem;
   text-transform: uppercase;
   transition-duration: .2s;
 }
 
 .header-menu-link:hover{
-  color: var(--dark-blue);
+  border-bottom: solid var(--red) thin;
+  padding-bottom: .05rem;
 }
 
 .header-menu-active{
-  color: var(--dark-blue);
+  border-bottom: solid var(--red) 2px;
 }
 
 /*Showcase*/
@@ -154,14 +156,17 @@ li{
 
 .showcase-text-bottom{
   font-size: 1.7rem;
-  margin: 2.2rem 0 2rem 0;
+  margin: 1.5rem 0 1.5rem 0;
   animation-name: moveToLeft;
   animation-duration: 2s;
 }
 
 .showcase-button{
+  background-color: var(--red);
   color: var(--white);
-  border: solid var(--white) 2px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  padding: .65rem 1.5rem;
 }
 
 /*Keyframes that bring showcase text in from the left and right*/
@@ -197,22 +202,38 @@ li{
   }
 }
 
+/* Flex container placing the title on the left and link on the right */
+.home-title-link-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 4rem auto 0 auto;
+}
+
 /*Titles for each section/category on the home page*/
 .home-title{
-  margin-top: 4rem;
-  text-align: center;
   text-transform: uppercase;
-  font-size: 1.65rem;
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
 }
 
 /*Red underline underneath the title*/
 .home-title::after{
   content: "";
   display: block;
-  width: 3.5%;
+  width: 50%;
   margin: 0 auto;
   padding-top: .5rem ;
   border-bottom: solid var(--red) 3px;
+}
+
+/* View all link to the right of each section title */
+.home-link{
+  border: solid var(--slate-grey) thin;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  color: #333333;
 }
 
 /*Project section*/

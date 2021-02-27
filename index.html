@@ -22,10 +22,9 @@
       <!-- Header menu on the right side-->
       <nav>
         <ul class="header-menu">
+          <li><a href="#" class="header-menu-active header-menu-link">Home</a></li>
           <li><a href="/menu-pages/about.html" class="header-menu-link">About</a></li>
           <li><a href="/menu-pages/projects.html" class="header-menu-link">Projects</a></li>
-          <li><a href="/menu-pages/resume.html" class="header-menu-link">Resume</a></li>
-          <li><a href="/menu-pages/requirement.html" class="header-menu-link">Requirement Gathering</a></li>
           <li><a href="/menu-pages/contact.html" class="header-menu-link">Contact</a></li>
         </ul>
       </nav>
@@ -42,15 +41,24 @@
     </div>
   </div>
 
-  <!--Project Title-->
-  <h2 class="home-title red-line">Projects</h2>
+  <!-- Home title & link container -->
+  <div class="home-title-link-container">
+    <!-- Container for the projects title on the left -->
+    <div class="home-title-container">
+      <h2 class="home-title red-line">Projects</h2>
+    </div>
+    <!-- Container for the projects link on the right -->
+    <div class="home-link-container">
+      <a href="/menu-pages/projects.html" class="home-link">View All</a>
+    </div>
+  </div>
+
   <!--Project section that sets grid display for the projects within the container-->
   <div class="home-project-container">
-
     <!--Row 1 Project 1 (Dine)-->
     <div class="home-project">
       <div class="home-project-image-container">
-        <img src="/img/dining_thumbnail.jpg" alt="Restaurant">
+        <img src="img/dining_thumbnail.jpg" alt="Restaurant">
       </div>
       <div class="home-project-text-container">
         <p class="home-project-text-top">Dine</p>
@@ -95,61 +103,7 @@
       </div>
     </div>
   </div>
-  
-  <!--  Resume Section that has a grey background -->
-  <div class="home-resume-section">
-    <!-- Resume Title -->
-    <h2 class="home-title red-line">Resume</h2>
-    <!-- Resume Icon container -->
-    <div class="home-resume-icon-container">
-      <i class="fas fa-file-contract"></i>
-    </div>
-    <!-- Resume Text Container -->
-    <div class="home-resume-text-container">
-      <h3 class="home-resume-big-text">Click the button below to view my skills, education, and more!</h3>
-      <p class="home-resume-small-text">University of Louisville, College of Business</p>
-      <p class="home-resume-small-text">Bachelor of Science in Business Administration.</p>
-      <p class="home-resume-small-text">Major: Computer Information Systems</p>
-    </div>
-    <!-- Resume Button/Link -->
-    <a href="/menu-pages/resume.html" class="home-resume-button button">View More</a>
-  </div>
 
-  <!-- Requirement Documentation -->
-  <div class="home-requirement-section">
-    <!-- Requirement Title -->
-    <h2 class="home-title red-line">Requirement Documentation</h2>
-    <!-- Requirement Container -->
-    <div class="home-requirement-container">
-      
-      <!-- Requirement Box 1 -->
-      <div class="home-requirement-box">
-        <!-- Icon -->
-        <i class="fas fa-file-invoice"></i>
-        <h3 class="home-requirement-box-title">Use Case</h3>
-        <p class="home-requirement-description">Use Case created for a non-profit orginization.</p>
-        <a href="https://docs.google.com/document/d/1Wnlm_A28psSkppn9f5xi72RT-mI6DoFAP2yYgFA4iGk/edit?usp=sharing" target="_blank" class="home-requirement-button button">View Document</a>
-      </div>
-      
-      <!-- Requirement Box 2 -->
-      <div class="home-requirement-box">
-        <!-- Icon -->
-        <i class="fas fa-file-contract"></i>
-        <h3 class="home-requirement-box-title">System Requirements</h3>
-        <p class="home-requirement-description">System Requirements created for a non-profit orginization.</p>
-        <a href="https://docs.google.com/document/d/1-klLy1778fULFtgqSsounuXUvDPMUtFhWrogjkAvZms/edit?usp=sharing" target="_blank" class="home-requirement-button button">View Document</a>
-      </div>
-      
-      <!--Requirement Box 3-->
-      <div class="home-requirement-box">
-        <!-- Icon -->
-        <i class="fas fa-file-alt"></i>
-        <h3 class="home-requirement-box-title">Trace Matrix</h3>
-        <p class="home-requirement-description">Trace Matrix created for a non-profit orginization.</p>
-        <a href="https://docs.google.com/spreadsheets/d/1fva2tikChqgKH25pUsdcabzbc6Q-0XiD7DxmYs5tHTM/edit?usp=sharing" target="_blank" class="home-requirement-button button">View Document</a>
-      </div>
-    </div>
-  </div>
 
   <!--Footer-->
   <footer class="footer">
