@@ -1,22 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 :root{
-  --slate-grey:#373939;
-  --dark-grey:#333333;
-  --medium-grey:#e1e4e8;
-  --light-grey:#f7f7f7;
+  --black: #18181a;
+  --dark-black: #000000;
+  --light-black: #0d0c22;
+  --dark-slate-gray: #464646;
+  --new-gray:#6e6d7a;
+  --medium-dark-gray: #575757;
+  --slate-gray:#373939;
+  --dark-gray:#333333;
+  --medium-gray:#e1e4e8;
+  --light-gray:#f2f2f2;
+  --whitesmoke:#f7f7f7;
   --white:#fff;
+  --light-blue: #6abecd;
   --dark-blue:#337ab7;
   --red:#eb5352;
 }
 
 /*Showcase*/
 .about-showcase{
-  background-image:url('/img/laptop.jpg') ;
+  background-image:url('/img/home-showcase-3.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60vh;
+  height: 30vh;
   position: relative;
 }
 
@@ -28,7 +36,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(128, 128, 128, .8);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .about-showcase-text-overlay{
@@ -54,58 +62,75 @@
   text-transform: uppercase;
   font-size: 2rem;
   color: var(--dark-grey);
-  margin: 3rem 0;
+  margin: 3rem 0 2rem 0;
   letter-spacing: .05rem;
 }
 
-/*red underline on the about title*/
+/* Underline on the about title*/
 .about-title::after{
   content: "";
   display: block;
-  width: 3%;
+  width: 7%;
   margin: 0 auto;
   padding-top: .75rem;
-  border-bottom: solid var(--red) 3.5px;
+  border-bottom: solid var(--light-blue) 3.5px;
 }
 
 .about-text-container{
-  width: 75%;
-  margin: 1rem auto 13rem auto;
+  width: 70%;
+  margin: 1rem auto 4rem auto;
   text-align: center;
 }
 
 .about-text{
-  font-size: 1.3rem;
-  line-height: 3rem;
-  color: var(--dark-grey);
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  color: var(--black);
 }
 
 /*Skills Section*/
 .about-skills-background{
-  background-color: var(--dark-grey);
-  padding-bottom: 8rem;
+  padding-bottom: 12rem;
 }
 
 .about-skills-title{
-  color: var(--white);
+  color: var(--black);
   text-align: center;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
   font-size: 2rem;
+}
+
+/* Underline on the about skills title*/
+.about-skills-title::after{
+  content: "";
+  display: block;
+  width: 5%;
+  margin: 0 auto;
+  padding-top: .75rem;
+  border-bottom: solid var(--light-blue) 3.5px;
 }
 
 .about-skills-container{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  width: 80%;
+  grid-template-columns: repeat(4,1fr);
+  justify-content: center;
+  width: 90%;
   margin: 0 auto;
 }
 
 .about-skill-box{
+  background-color: var(--dark-slate-gray);
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  justify-self: center;
+  width: 90%;
+  padding: 3rem 0;
+  margin: 0 auto;
 }
 
 .skill-category{
-  color: var(--medium-grey);
+  color: var(--medium-gray);
   text-transform: uppercase;
   font-size: 1.2rem;
   letter-spacing: .07rem;
@@ -123,22 +148,17 @@
   margin-bottom: .7rem;
 }
 
-@media(max-width:900px){
 
-  .about-showcase-text{
-    font-size: 1.95rem;
-  }
 
-  .about-title{
-    font-size: 1.5rem;
-  }
+@media(max-width:1000px){
   
   .about-text-container{
-    width: 90%;
+    width: 85%;
   }
 
   .about-text{
     font-size: 1.1rem;
+    line-height: 2.2rem;
   }
 
   .about-skills-title{
@@ -146,7 +166,12 @@
   }
 
   .about-skills-container{
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .about-skill-box{
+    margin-bottom: 1rem;
   }
   
   .skill-category{
@@ -164,19 +189,74 @@
 
 }
 
+@media(max-width: 900px){
+  /* Underline on the about title*/
+  .about-title::after{
+    width: 12%;
+  }
+
+  /* Underline on the about skills title*/
+  .about-skills-title::after{
+    width: 12%;
+  }
+}
+
+@media(max-width: 700px){
+  .about-text-container{
+    width: 87%;
+  }
+
+  .about-skills-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .about-skill-box{
+    width: 90%;
+    padding: 2rem 0;
+  }
+
+}
+
+@media(max-width: 560px){
+  .about-text{
+    line-height: 2rem;
+  }
+
+}
+
 @media(max-width:415px){
+  .about-showcase-text{
+    font-size: 2.2rem;
+  }
+
   .about-title{
     font-size: 1.45rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.5rem;
   }
 
   .about-title::after{
-    width: 10%;
+    width: 15%;
+    padding-top: 0.3rem;
+  }
+
+  .about-text-container{
+    width: 90%;
+    margin: 0 auto 4rem auto;
+    text-align: center;
   }
 
   .about-text{
+    width: 100%;
+    margin: 0 auto;
     font-size: .97rem;
-    line-height: 2.2rem;
+    line-height: 1.75rem;
+  }
+
+  /* Underline on the about skills title*/
+  .about-skills-title::after{
+    width: 15%;
+    padding-top: 0.3rem;
   }
 
   .about-skills-container{
