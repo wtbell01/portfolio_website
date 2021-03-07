@@ -1,20 +1,29 @@
 :root{
+  --black: #18181a;
+  --dark-black: #000000;
+  --light-black: #0d0c22;
+  --dark-slate-gray: #464646;
+  --new-gray:#6e6d7a;
+  --medium-dark-gray: #575757;
   --slate-grey:#373939;
   --dark-grey:#333333;
-  --medium-grey:#e1e4e8;
+  --medium-gray:#e1e4e8;
+  --medium-light-gray: #cccccc;
+  --light-gray:#f2f2f2;
   --light-grey:#f7f7f7;
   --white:#fff;
+  --light-blue: #6abecd;
   --dark-blue:#337ab7;
   --red:#eb5352;
 }
 
 /*Showcase*/
 .contact-showcase{
-  background-image:url('/img/laptop.jpg') ;
+  background-image:url('/img/home-showcase-3.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60vh;
+  height: 30vh;
   position: relative;
 }
 
@@ -26,7 +35,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(128, 128, 128, .8);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .contact-showcase-text-overlay{
@@ -56,13 +65,13 @@
   letter-spacing: .05rem;
 }
 
-/*red underline on the contact title*/
+/* Underline on the contact title */
 .contact-title::after{
   content: "";
   display: block;
-  width: 3%;
+  width: 7%;
   margin: 0 auto;
-  border-bottom: solid var(--red) 3px;
+  border-bottom: solid var(--light-blue) 3px;
   padding-top: 1rem;
 }
 
@@ -99,68 +108,57 @@
 
 /*Contact Form*/
 .contact-form{
-  display: grid;
-  grid-template-areas: 
-  'name email'
-  'subject phone'
-  'message message'
-  'submit-button submit-button';
+  display: flex;
+  flex-direction: column;
   width: 75%;
   margin: 5rem auto 8rem auto;
-}
-
-/*Each input field on the contact form*/
-.contact-form-input{
-  margin: 0 2rem 1rem 0;
 }
 
 .name,
 .email,
 .subject,
 .phone{
-  font-size: 1rem;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.9rem;
   padding: 1rem 0 1rem .5rem;
   letter-spacing: .05rem;
-}
-
-.message{
-  font-size: 1.3rem;
-  padding: .5rem 0 10rem .5rem;
-}
-
-/*assign the form inputs to the grid area to create the grid layouton the contact form*/
-.name{
-  grid-area: name;
-}
-
-.email{
-  grid-area: email;
-}
-
-.subject{
-  grid-area: subject;
-}
-
-.phone{
-  grid-area: phone;
-}
-
-.message{
-  grid-area: message;
-}
-
-.submit-button{
-  grid-area: submit-button;
-}
-
-.submit-button{
-  width: 30%;
+  border: none;
+  border-bottom: solid var(--medium-light-gray) thin;
+  width: 90%;
   margin: 0 auto;
-  padding: .5rem 0;
+}
+
+.message{
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
+  margin: 1rem auto;
+  padding: .5rem 0 10rem .5rem;
+  border: solid var(--medium-light-gray) 2px;
+  width: 90%;
+}
+
+input:focus{
+  outline: none;
+}
+
+.submit-button{
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
+  background-color: var(--dark-black);
+  color: var(--white);
+  width: 30%;
+  border: none;
+  letter-spacing: 0.075rem;
+  margin: 0 auto;
+  padding: 1rem 0;
   text-transform: uppercase;
 }
 
 @media(max-width:900px){
+  /* Underline on the contact title */
+  .contact-title::after{
+    width: 12%;
+  }
   .contact-showcase-text{
     font-size: 1.95rem;
   }
@@ -172,29 +170,10 @@
   .personal-contact-container{
     width: 100%;
   }
-
-  /*Contact Form*/
-  .contact-form{
-    display: grid;
-    width: 80%;
-    grid-template-areas: 
-    'name' 
-     'email'
-    'subject' 
-     'phone'
-    'message' 
-    'submit-button';
+  .submit-button{
+    width: 35%;
+    
   }
-
-  .name,
-  .email,
-  .subject,
-  .phone{
-    margin-bottom: 1rem;
-    font-size: .85rem;
-    padding: .85rem 0 .85rem 1rem;
-  }
-
 }
 
 @media(max-width:700px){
@@ -215,6 +194,44 @@
   
   .personal-contact-info{
     font-size: 1rem;
+  }
+
+  .name,
+  .email,
+  .subject,
+  .phone,
+  .message{
+    width: 100%;
+  }
+}
+
+@media(max-width: 415px){
+  .contact-title{
+    margin-bottom: 1.5rem;
+  }
+
+  .personal-showcase-text{
+    font-size: 2.2rem;
+  }
+
+  .personal-title{
+    font-size: 1.45rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .personal-title::after{
+    width: 15%;
+    padding-top: 0.3rem;
+  }
+
+  .personal-contact-container{
+    display: none;
+  }
+
+  /*Contact Form*/
+  .contact-form{
+    width: 90%;
+    margin-top: 0;
   }
 }
 
