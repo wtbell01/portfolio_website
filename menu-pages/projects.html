@@ -4,29 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-media-query.css">
   <link rel="stylesheet" href="/css/projects.css">
   <script src="https://kit.fontawesome.com/54d99b3e75.js" crossorigin="anonymous"></script>
   <title>WB | Projects</title>
 </head>
 <body>
-
-  <!-- Header -->
+  
+  <!--Header-->
   <header class="header">
-    <!-- Flex container that places logo on the left and menu on the right -->
+    <!-- Flex container that places the header logo on the left and menu on the right-->
     <div class="header-container">
-      <!-- Header logo -->
+      <!-- Header logo container -->
       <div class="header-logo-container">
-        <h2><a href="/index.html" class="header-logo header-logo-top">William</a></h2>
-        <h4><a href="/index.html" class="header-logo header-logo-bottom">Bell</a></h4>
+        <h3><a href="/index.html" class="header-logo header-logo-text">William Bell</a></h3>
       </div>
-      
-      <!-- Header menu -->
-      <nav>
+
+      <!-- Header menu to the right of the logo-->
+      <nav class="header-menu-container">
         <ul class="header-menu">
-          <li><a href="/index.html" class="header-menu-link">Home</a></li>
+          <li><a href="/index.html" class="header-menu-active header-menu-link">Home</a></li>
           <li><a href="about.html" class="header-menu-link">About</a></li>
-          <li><a href="#" class="header-menu-active header-menu-link">Projects</a></li>
-          <li><a href="contact.html" class="header-menu-link">Contact</a></li>
+          <li><a href="#" class="header-menu-link">Projects</a></li>
+          <li class="header-contact-li"></li><a href="contact.html" class="header-contact-button">Contact</a>
         </ul>
       </nav>
     </div>
@@ -46,216 +46,376 @@
   <div class="projects-container">
     <!--Project 1 (Dine)-->
     <div class="project-box project-box-1">
-      <!--Project Image Side-->
+      <!--Project Image Container-->
       <div class="project-image-container">
-        <img src="/img/dine-website.png" alt="Dine home page">
+        <img src="/img/dine-website-home.jpg" alt="Dine home page">
+        <!-- Project image text container - displays title, languages, and button on hover -->
+        <div class="project-image-text-container">
+          <p class="project-image-text-title">Dine</p>
+          <p class="project-image-text-language">HTML - CSS - JS</p>
+          <a href="https://dine1.netlify.app/" target="_blank" class="project-image-button">Launch Project</a>
+        </div>
       </div>
-      <!--Project Description Side-->
+      <!--Project Description Container holding the name,description, and languages of the project -->
       <div class="project-description-container">
         <!--Project Description Top Half-->
-        <div class="project-top">
-          <h2 class="project-title">Dine</h2>
-          <p class="project-languages">Html - CSS - Javascript</p>
+        <div class="project-title-container">
+          <p class="project-box-title">Dine</p>
         </div>
-        <!--Project Description Bottom Half-->
-        <div class="project-bottom">
-          <p class="project-overview-title">Project Overview</p>
-          <div class="project-overview-container">
-            <p class="project-overview-text">This is a multi-page project for a restaurant, which allows users to make
-             reservations. Fetch was used on the home page in order to display content according to the booking link
-            that is selected.</p>
-          </div>
-          <!--Button that opens the project-->
+        <!-- Project overview container -->
+        <div class="project-overview-container">
+          <p class="project-overview-text">This is a multi-page project for a restaurant, which allows users to make
+            reservations. Fetch was used on the home page in order to display content according to the booking link
+           that is selected.</p>
+        </div>
+        <!-- Project languages container -->
+        <ul class="project-languages-container">
+          <li class="project-languages-li">Html</li>
+          <li class="project-languages-li">Css</li>
+          <li class="project-languages-li">Javascript</li>
+        </ul>
+        <!-- Project buttons container-->
+        <div class="project-button-container">
           <a href="https://dine1.netlify.app/" target="_blank" class="project-button">Launch Project</a>
         </div>
       </div>
     </div>
 
-    <!--Project 2 (Huddle)-->
-    <div class="project-box project-box-1">
-      <!--Project Description Side-->
-      <div class="project-description-container">
-        <!--Project Description Top Half-->
-        <div class="project-top">
-          <h2 class="project-title">Huddle</h2>
-          <p class="project-languages">Html - CSS</p>
-        </div>
-        <!--Project Description Bottom Half-->
-        <div class="project-bottom">
-          <p class="project-overview-title">Project Overview</p>
-          <div class="project-overview-container">
-            <p class="project-overview-text">This project is a landing page for a fictional business. I received the
-            design/mockup from Frontend Mentor, and coded the following.</p>
-          </div>
-          <!--Button that opens the project-->
-          <a href="https://huddle-landing-page-1.netlify.app/" target="_blank" class="project-button">Launch Project</a>
-        </div>
-      </div>
-      <!--Project Image Side-->
-      <div class="project-image-container">
-        <img src="/img/huddle-home-page.png" alt="Huddle home page">
-      </div>
-    </div>
 
-    <!--Project 3(Lakeland)-->
-    <div class="project-box project-box-2">
-      <!--Project Image Side-->
+    <!--Project 2 (Lakeland Cleaners)-->
+    <div class="project-box project-box-1">
+      <!--Project Image Container-->
       <div class="project-image-container">
-        <img src="/img/LakelandCleaners.png" alt="Lakeland Cleaners home page">
+        <img src="/img/LakelandCleaners-website-home.jpg" alt="Lakeland Cleaners home page">
+        <!-- Project image text container - displays title, languages, and button on hover -->
+        <div class="project-image-text-container">
+          <p class="project-image-text-title">Lakeland Cleaners</p>
+          <p class="project-image-text-language">HTML - CSS</p>
+          <a href="https://lakelandcleaners.netlify.app/" target="_blank" class="project-image-button">Launch Project</a>
+        </div>
       </div>
-      <!--Project Description Side-->
+      <!--Project Description Container holding the name,description, and languages of the project -->
       <div class="project-description-container">
         <!--Project Description Top Half-->
-        <div class="project-top">
-          <h2 class="project-title">Lakeland Cleaners</h2>
-          <p class="project-languages">Html - CSS</p>
+        <div class="project-title-container">
+          <p class="project-box-title">Lakeland Cleaners</p>
         </div>
-        <!--Project Description Bottom Half-->
-        <div class="project-bottom">
-          <p class="project-overview-title">Project Overview</p>
-          <div class="project-overview-container">
-            <p class="project-overview-text">This project is a multi-page site for a dry cleaning company. </p>
-          </div>
-          <!--Button that opens the project-->
+        <!-- Project overview container -->
+        <div class="project-overview-container">
+          <p class="project-overview-text">This project is a multi-page site for a dry cleaning company. Users can view 
+          information about the company, locations, services, and contact the company through forms. 
+          </p>
+        </div>
+        <!-- Project languages container -->
+        <ul class="project-languages-container">
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Html</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Css</a></li>
+        </ul>
+        <!-- Project buttons container-->
+        <div class="project-button-container">
           <a href="https://lakelandcleaners.netlify.app/" target="_blank" class="project-button">Launch Project</a>
         </div>
       </div>
     </div>
 
-    <!--Project 4 (Sports quiz)-->
-    <div class="project-box project-box-3">
-      <!--Project Description Side-->
-      <div class="project-description-container">
-        <!--Project Description Top Half-->
-        <div class="project-top">
-          <h2 class="project-title">Sports Quiz</h2>
-          <p class="project-languages">Html - CSS - Javascript</p>
-        </div>
-        <!--Project Description Bottom Half-->
-        <div class="project-bottom">
-          <p class="project-overview-title">Project Overview</p>
-          <div class="project-overview-container">
-            <p class="project-overview-text">This project is a quiz that provides feedback after 
-            each answer, and provides a total score at the end of the quiz.</p>
-          </div>
-          <!--Button that opens the project-->
-          <a href="https://sportsquiz.netlify.app/" target="_blank" class="project-button">Launch Project</a>
+
+    <!--Project 3 (Huddle)-->
+    <div class="project-box project-box-1">
+      <!--Project Image Container-->
+      <div class="project-image-container">
+        <img src="/img/huddle-home-page.jpg" alt="Huddle home page">
+        <!-- Project image text container - displays title, languages, and button on hover -->
+        <div class="project-image-text-container">
+          <p class="project-image-text-title">Huddle</p>
+          <p class="project-image-text-language">HTML - CSS</p>
+          <a href="https://huddle-landing-page-1.netlify.app/" target="_blank" class="project-image-button">Launch Project</a>
         </div>
       </div>
-      <!--Project Image Side-->
-      <div class="project-image-container">
-        <img src="/img/sportsquiz-newest.png" alt="Sports Quiz">
+      <!--Project Description Container holding the name,description, and languages of the project -->
+      <div class="project-description-container">
+        <!--Project Description Top Half-->
+        <div class="project-title-container">
+          <p class="project-box-title">Huddle</p>
+        </div>
+        <!-- Project overview container -->
+        <div class="project-overview-container">
+          <p class="project-overview-text">This project is a landing page for a fictional business. I received the design/mockup from 
+          Frontend Mentor, and coded the following.</p>
+        </div>
+        <!-- Project languages container -->
+        <ul class="project-languages-container">
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Html</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Css</a></li>
+        </ul>
+        <!-- Project buttons container-->
+        <div class="project-button-container">
+          <a href="https://huddle-landing-page-1.netlify.app/" target="_blank" class="project-button">Launch Project</a>
+        </div>
       </div>
     </div>
 
-    <!--Project 5 (W2)-->
-    <div class="project-box project-box-4">
-      <!--Project Image Side-->
+
+    <!--Project 4 (To do list)-->
+    <div class="project-box project-box-1">
+      <!--Project Image Container-->
       <div class="project-image-container">
-        <img src="/img/W2-website-home.png" alt="W2 Strategic Site">
+        <img src="/img/todo-website-home.jpg" alt="Todo home page">
+        <!-- Project image text container - displays title, languages, and button on hover -->
+        <div class="project-image-text-container">
+          <p class="project-image-text-title">Todo</p>
+          <p class="project-image-text-language">HTML - CSS - JS</p>
+          <a href="https://todolist12.netlify.app/" target="_blank" class="project-image-button">Launch Project</a>
+        </div>
       </div>
-      <!--Project Description Side-->
+      <!--Project Description Container holding the name,description, and languages of the project -->
       <div class="project-description-container">
         <!--Project Description Top Half-->
-        <div class="project-top">
-          <h2 class="project-title">W2 Strategic Communications</h2>
-          <p class="project-languages">Html - CSS</p>
+        <div class="project-title-container">
+          <p class="project-box-title">Todo</p>
         </div>
-        <!--Project Description Bottom Half-->
-        <div class="project-bottom">
-          <p class="project-overview-title">Project Overview</p>
-          <div class="project-overview-container">
-            <p class="project-overview-text">The goal of this project is to promote the services of a communications company. The site highlights 
-            the work and clients of the company, in hopes of bringing in new clients. </p>
-          </div>
-          <!--Button that opens the project-->
+        <!-- Project overview container -->
+        <div class="project-overview-container">
+          <p class="project-overview-text">This is a to do list application. Check off your completed tasks, pick your view, and stay 
+          updated on your remaining items</p>
+        </div>
+        <!-- Project languages container -->
+        <ul class="project-languages-container">
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Html</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Css</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Javascript</a></li>
+        </ul>
+        <!-- Project buttons container-->
+        <div class="project-button-container">
+          <a href="https://todolist12.netlify.app/" target="_blank" class="project-button">View Project</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Project 5 (Brand Beard)-->
+    <div class="project-box project-box-1">
+      <!--Project Image Container-->
+      <div class="project-image-container">
+        <img src="/img/brandbeard-website-home.jpg" alt="Brand beard home page">
+        <!-- Project image text container - displays title, languages, and button on hover -->
+        <div class="project-image-text-container">
+          <p class="project-image-text-title">Brandbeard</p>
+          <p class="project-image-text-language">HTML - CSS</p>
+          <a href="https://brandbeard.netlify.app/" target="_blank" class="project-image-button">Launch Project</a>
+        </div>
+      </div>
+      <!--Project Description Container holding the name,description, and languages of the project -->
+      <div class="project-description-container">
+        <!--Project Description Top Half-->
+        <div class="project-title-container">
+          <p class="project-box-title">Brandbeard</p>
+        </div>
+        <!-- Project overview container -->
+        <div class="project-overview-container">
+          <p class="project-overview-text">This is a single page site based off of the Beardbrand website. Json and Fetch were used to display
+          fragrences selected by the user. At the click of each fragrence link, new content will be displayed.
+          </p>
+        </div>
+        <!-- Project languages container -->
+        <ul class="project-languages-container">
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Html</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Css</a></li>
+        </ul>
+        <!-- Project buttons container-->
+        <div class="project-button-container">
+          <a href="https://brandbeard.netlify.app/" target="_blank" class="project-button">Launch Project</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Project 6 (W2 Strategic)-->
+    <div class="project-box project-box-1">
+      <!--Project Image Container-->
+      <div class="project-image-container">
+        <img src="/img/W2-website-home.jpg" alt="W2 home page">
+        <!-- Project image text container - displays title, languages, and button on hover -->
+        <div class="project-image-text-container">
+          <p class="project-image-text-title">W2 Strategic</p>
+          <p class="project-image-text-language">HTML - CSS</p>
+          <a href="https://w2strategic.netlify.app/" target="_blank" class="project-image-button">Launch Project</a>
+        </div>
+      </div>
+      <!--Project Description Container holding the name,description, and languages of the project -->
+      <div class="project-description-container">
+        <!--Project Description Top Half-->
+        <div class="project-title-container">
+          <p class="project-box-title">W2 Strategic Communications</p>
+        </div>
+        <!-- Project overview container -->
+        <div class="project-overview-container">
+          <p class="project-overview-text">The goal of this project is to promote the services of a communications company. 
+          The site highlights the work and clients of the company, in hopes of bringing in new clients.</p>
+        </div>
+        <!-- Project languages container -->
+        <ul class="project-languages-container">
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Html</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Css</a></li>
+        </ul>
+        <!-- Project buttons container-->
+        <div class="project-button-container">
           <a href="https://w2strategic.netlify.app/" target="_blank" class="project-button">Launch Project</a>
         </div>
       </div>
     </div>
 
-    <!--Project 6 (Budget calculator)-->
-    <div class="project-box project-box-5">
-      <!--Project Description Side-->
+
+    <!--Project 7 (Budget Calculator)-->
+    <div class="project-box project-box-1">
+      <!--Project Image Container-->
+      <div class="project-image-container">
+        <img src="/img/budgetcalculator-website-home.jpg" alt="Budget calculator home page">
+        <!-- Project image text container - displays title, languages, and button on hover -->
+        <div class="project-image-text-container">
+          <p class="project-image-text-title">Budget Calculator</p>
+          <p class="project-image-text-language">HTML - CSS - JS</p>
+          <a href="https://thebudget.netlify.app/" target="_blank" class="project-image-button">Launch Project</a>
+        </div>
+      </div>
+      <!--Project Description Container holding the name,description, and languages of the project -->
       <div class="project-description-container">
         <!--Project Description Top Half-->
-        <div class="project-top">
-          <h2 class="project-title">Budget Calculator</h2>
-          <p class="project-languages">Html - CSS - Javascript</p>
+        <div class="project-title-container">
+          <p class="project-box-title">Budget Calculator</p>
         </div>
-        <!--Project Description Bottom Half-->
-        <div class="project-bottom">
-          <p class="project-overview-title">Project Overview</p>
-          <div class="project-overview-container">
-            <p class="project-overview-text">This project is based on the 50/30/20 budgeting rule in finance.
-            Users can enter their monthly income, and receive their budget targets at the click of a button.
-            </p>
-          </div>
-          <!--Button that opens the project-->
+        <!-- Project overview container -->
+        <div class="project-overview-container">
+          <p class="project-overview-text">This project is based on the 50/30/20 budgeting rule in finance. Users can enter their
+          monthly income, and receive their budget targets at the click of a button.</p>
+        </div>
+        <!-- Project languages container -->
+        <ul class="project-languages-container">
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Html</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Css</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Javascript</a></li>
+        </ul>
+        <!-- Project buttons container-->
+        <div class="project-button-container">
           <a href="https://thebudget.netlify.app/" target="_blank" class="project-button">Launch Project</a>
         </div>
       </div>
-      <!--Project Image Side-->
-      <div class="project-image-container">
-        <img src="/img/budgetcalculator.png" alt="Budget Calculator">
-      </div>
     </div>
 
-    <!--Project 7 (Brandbeard)-->
-    <div class="project-box project-box-6">
-      <!--Project Image Side-->
+
+    <!--Project 8 (Registration)-->
+    <div class="project-box project-box-1">
+      <!--Project Image Container-->
       <div class="project-image-container">
-        <img src="/img/brandbeard.png" alt="Brandbeard site">
-      </div>
-      <!--Project Description Side-->
-      <div class="project-description-container">
-        <!--Project Description Top Half-->
-        <div class="project-top">
-          <h2 class="project-title">Brandbeard</h2>
-          <p class="project-languages">Html - CSS</p>
-        </div>
-        <!--Project Description Bottom Half-->
-        <div class="project-bottom">
-          <p class="project-overview-title">Project Overview</p>
-          <div class="project-overview-container">
-            <p class="project-overview-text">This project is a single page site that mirrors the Beardbrand website.</p>
-          </div>
-          <!--Button that opens the project-->
-          <a href="https://brandbeard.netlify.app/" target="_blank" class="project-button">Launch Project</a>
+        <img src="/img/register.jpg" alt="Register home page">
+        <!-- Project image text container - displays title, languages, and button on hover -->
+        <div class="project-image-text-container">
+          <p class="project-image-text-title">Register</p>
+          <p class="project-image-text-language">HTML - CSS - JS</p>
+          <a href="https://registration-time.netlify.app/" target="_blank" class="project-image-button">Launch Project</a>
         </div>
       </div>
-    </div>
-    
-    <!--Project 8 (Register)-->
-    <div class="project-box project-box-7">
-      <!--Project Description Side-->
+      <!--Project Description Container holding the name,description, and languages of the project -->
       <div class="project-description-container">
         <!--Project Description Top Half-->
-        <div class="project-top">
-          <h2 class="project-title">Register</h2>
-          <p class="project-languages">Html - CSS - Javascript</p>
+        <div class="project-title-container">
+          <p class="project-box-title">Register</p>
         </div>
-        <!--Project Description Bottom Half-->
-        <div class="project-bottom">
-          <p class="project-overview-title">Project Overview</p>
-          <div class="project-overview-container">
-            <p class="project-overview-text">This project allows students to view their registration time by entering
-            their last name and selecting their classification.</p>
-          </div>
-          <!--Button that opens the project-->
+        <!-- Project overview container -->
+        <div class="project-overview-container">
+          <p class="project-overview-text">This project allows students to view their registration time by entering their last name
+          and selecting their classification. An error message will be displayed for any input error.</p>
+        </div>
+        <!-- Project languages container -->
+        <ul class="project-languages-container">
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Html</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Css</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Javascript</a></li>
+        </ul>
+        <!-- Project buttons container-->
+        <div class="project-button-container">
           <a href="https://registration-time.netlify.app/" target="_blank" class="project-button">Launch Project</a>
         </div>
       </div>
-      <!--Project Image Side-->
+    </div>
+
+
+    <!--Project 9 (Sports Quiz)-->
+    <div class="project-box project-box-1">
+      <!--Project Image Container-->
       <div class="project-image-container">
-        <img src="/img/register.png" alt="Class registration site">
+        <img src="/img/sportsquiz-website-home.jpg" alt="Sports quiz home page">
+        <!-- Project image text container - displays title, languages, and button on hover -->
+        <div class="project-image-text-container">
+          <p class="project-image-text-title">Sports Quiz</p>
+          <p class="project-image-text-language">HTML - CSS - JS</p>
+          <a href="https://sportsquiz.netlify.app/" target="_blank" class="project-image-button">Launch Project</a>
+        </div>
+      </div>
+      <!--Project Description Container holding the name,description, and languages of the project -->
+      <div class="project-description-container">
+        <!--Project Description Top Half-->
+        <div class="project-title-container">
+          <p class="project-box-title">Sports Quiz</p>
+        </div>
+        <!-- Project overview container -->
+        <div class="project-overview-container">
+          <p class="project-overview-text">This project is a quiz that provides feedback after each answer, and provides a total
+          score at the end of the quiz.</p>
+        </div>
+        <!-- Project languages container -->
+        <ul class="project-languages-container">
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Html</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Css</a></li>
+          <li class="project-languages-li"><a href="#" class="project-languages-link">Javascript</a></li>
+        </ul>
+        <!-- Project buttons container-->
+        <div class="project-button-container">
+          <a href="https://sportsquiz.netlify.app/" target="_blank" class="project-button">Launch Project</a>
+        </div>
       </div>
     </div> 
   </div>
+
+  <!-- Call to action -->
+  <div class="call-to-action">
+    <!-- Call to action container that places text on the left and button on the right -->
+    <div class="call-to-action-container">
+      <!-- Call to action text -->
+      <p class="call-to-action-text">Feel free to reach out for <span class="call-to-action-black">more information!</span></p>
+      <!-- Call to action button container -->
+      <div class="call-to-action-button-container">
+        <a href="menu-pages/contact.html" class="call-to-action-buton">Get in touch</a>
+      </div>
+    </div>
+  </div>
   
-  <!--Footer-->
+   <!--Footer-->
   <footer class="footer">
-    <p class="footer-text">Copyright &copy; WilliamBell</p>
+    <!-- Footer flex container holding 3 columns -->
+    <div class="footer-container">
+      <!-- Footer column 1 (Logo)-->
+      <div class="footer-column footer-column-1">
+        <h3 class="footer-logo"><a href="#" class="footer-logo-link">William Bell</a></h3>
+      </div>
+
+      <!-- Footer column 2 (Location)-->
+      <div class="footer-column footer-column-2">
+        <ul class="footer-list">
+          <li class="footer-list-li">Louisville, Kentucky</li>
+          <li class="footer-list-li">United States</li>
+          <li class="footer-list-li">502-229-0288</li>
+        </ul>
+      </div>
+
+      <!-- Footer column 3 (Contact information)-->
+      <div class="footer-column footer-column-3">
+        <ul class="footer-list">
+          <li class="footer-list-li">Email & Github</li>
+          <li class="footer-list-li">wtbell4080@gmail.com</li>
+          <li class="footer-list-li">github.com/wtbell01</li>
+        </ul>
+      </div>
+    </div>
   </footer>
   
   
