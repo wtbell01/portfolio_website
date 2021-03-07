@@ -1,0 +1,338 @@
+
+/*Media queries for home page/index.html*/
+@media(max-width:1200px){
+  .call-to-action-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+  }
+
+  .call-to-action-text{
+    font-size: 1.3rem;
+    line-height: 1.65rem;
+    text-align: center;
+    margin: 0 auto 2rem auto;
+  }
+
+  .call-to-action-button-container{
+    margin: 0 auto;
+  }
+}
+
+/*Media queries for home page/index.html*/
+@media(max-width:1058px){
+  .home-project-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  /*Individual project box*/
+  .home-project{
+    height: 40vh;
+  }
+
+  .home-project-text-container{
+    position: absolute;
+    top:30%;
+  }
+  
+  
+  .home-project-text-top{
+    margin-bottom: 0.75rem;
+  }
+  
+  .home-project-text-bottom{
+    margin-bottom: 1.15rem;
+  }
+  
+  .home-project-button{
+    font-size: 1rem;
+  }
+   
+}
+
+@media(max-width:900px){
+
+  /*header*/
+  .header-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-menu-link{
+    margin:0 2rem 0 0;
+  }
+
+  .header-logo-container{
+    margin-bottom: 1rem;
+  }
+
+  .header-logo-top{
+    font-size: 1.8rem;
+    position: relative;
+    right: 1.5rem;
+  }
+  
+  .header-logo-bottom{
+    font-size: 1.6rem; 
+  }
+
+  /*Project section*/
+  .home-project-container{
+    width: 97%;
+  }
+
+  .home-project{
+    height: 55vh;
+    margin-bottom: 0.25rem;
+  }
+
+  .home-project-image-container{
+    height: 75vh;
+  }
+
+  .footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .footer-column{
+    margin-bottom: 2rem;
+  }
+
+}
+
+@media(max-width:670px){
+  /*Showcase*/
+  .showcase{
+    height: 50vh;
+  }
+
+  /* Showcase text container holding the showcase header, paragraph and buttons */
+  .showcase-text-container{
+    padding-top: 5rem;
+  }
+
+
+  .showcase-text-header{
+    font-size: 1.5rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .showcase-text-paragraph{
+    font-size: 0.95rem;
+    width: 65%;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .showcase-button{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: .65rem 1.5rem;
+  }
+
+  .header-menu-link{
+    font-size: .95rem;
+    margin:0 1rem 0 0;
+  }
+
+  /* Flex container placing the title on the left and link on the right */
+  .home-title-link-container{
+    width: 95%;
+  }
+
+  /*Titles for each section/category on the home page*/
+  .home-title{
+    font-size: 1.5rem;
+  }
+
+  /* View all link to the right of each section title */
+  .home-link{
+    font-size: 0.8rem;
+  }
+
+  /*Individual project box*/
+  .home-project{
+    height: 30vh;
+  }
+
+  .home-project-text-top{
+    font-size: 1.65rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .home-project-text-bottom{
+    font-size: 1rem;
+    margin-bottom: 1.15rem;
+  }
+  
+  .home-project-button{
+    font-size: 0.9rem;
+  }
+
+}
+
+@media(max-width: 516px){
+  /* Banner contact links nested inside list items*/
+  .banner-contact-link{
+    font-size: 0.7rem;
+  }
+}
+
+/*Media Query 415px*/
+@media(max-width: 415px){
+  /* Header - top set to 0 to place header at the top of the screen on scroll down */
+  .header{
+    position: sticky;
+    top: 0;
+  }
+
+  .header-logo-container{
+    text-align: center;
+  }
+
+   /* Header flex container placing the header logo on the left and the menu on the right */
+  .header-container{
+    width: 90%;
+  }
+ 
+  /* Nav container for the header menu */
+  .header-menu-container{
+    width: 80%;
+  }
+
+  .header-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .header-menu-link{
+    font-size: .9rem;
+  }
+
+  /* Header contact buton */
+  .header-contact-button{
+    background-color: var(--light-blue);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    padding: 0.05rem 0.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+   /*Showcase*/
+   .showcase{
+    height: 50vh;
+  }
+
+  /* Showcase text container holding the showcase header, paragraph and buttons */
+  .showcase-text-container{
+    padding-top: 4.5rem;
+  }
+
+  .showcase-text-header{
+    font-size: 1.5rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .showcase-text-paragraph{
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    width: 95%;
+    margin: 0 auto 2rem auto;
+  }
+
+  .showcase-button{
+    font-size: 0.8rem;
+  }
+  
+  /*Titles on home page*/
+  .home-title{
+    font-size: 1.25rem;
+  }
+  
+  .home-title::after{
+    width: 50%;
+  }
+  
+  /*home project section*/
+  .home-project{
+    height: 40vh;
+  }
+
+  .home-project::before{
+    background:rgba(0,0,0,0.6);
+    opacity: 1;
+  }
+
+  .home-project-image-container{
+    height: 40vh;
+  }
+
+  .home-project-text-container{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .home-project-text-top{
+    font-size: 1.7rem;
+    margin-bottom: .5rem;
+  }
+  
+  .home-project-text-bottom{
+    font-size: .95rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-project-button{
+    font-size: .8rem;
+  }
+}
+
+@media(max-width:320px){
+  .header-menu-link{
+    font-size: .75rem;
+  }
+
+  /*Showcase*/
+  .showcase{
+    height: 50vh;
+  }
+
+  /* Showcase text container holding the showcase header, paragraph and buttons */
+  .showcase-text-container{
+    padding-top: 2.5rem;
+  }
+
+  .showcase-text-header{
+    font-size: 1.25rem;
+  }
+
+  .showcase-text-paragraph{
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+
+  .showcase-button{
+    font-size: 0.7rem;
+  }
+
+  .call-to-action-text{
+    font-size: 1rem;
+    line-height: 1.45rem;
+  }
+
+  .call-to-action-button-container{
+    font-size: 0.9rem;
+  }
+}
