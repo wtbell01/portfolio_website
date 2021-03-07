@@ -4,28 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-media-query.css">
   <link rel="stylesheet" href="/css/about.css">
   <script src="https://kit.fontawesome.com/54d99b3e75.js" crossorigin="anonymous"></script>
   <title>WB | About</title>
 </head>
 <body>
-  <!-- Header -->
+  
+  <!--Header-->
   <header class="header">
-    <!-- Flex container that places logo on the left and menu on the right -->
+    <!-- Flex container that places the header logo on the left and menu on the right-->
     <div class="header-container">
-      <!-- Header logo -->
+      <!-- Header logo container -->
       <div class="header-logo-container">
-        <h2><a href="/index.html" class="header-logo header-logo-top">William</a></h2>
-        <h4><a href="/index.html" class="header-logo header-logo-bottom">Bell</a></h4>
+        <h3><a href="/index.html" class="header-logo header-logo-text">William Bell</a></h3>
       </div>
-      
-      <!-- Header menu -->
-      <nav>
+
+      <!-- Header menu to the right of the logo-->
+      <nav class="header-menu-container">
         <ul class="header-menu">
-          <li><a href="/index.html" class="header-menu-link">Home</a></li>
-          <li><a href="#" class="header-menu-active header-menu-link">About</a></li>
+          <li><a href="/index.html" class="header-menu-active header-menu-link">Home</a></li>
+          <li><a href="#" class="header-menu-link">About</a></li>
           <li><a href="projects.html" class="header-menu-link">Projects</a></li>
-          <li><a href="contact.html" class="header-menu-link">Contact</a></li>
+          <li class="header-contact-li"></li><a href="contact.html" class="header-contact-button">Contact</a>
         </ul>
       </nav>
     </div>
@@ -39,17 +40,16 @@
   </div>
   
   <!-- About Title -->
-  <h2 class="about-title">About Me</h2>
+  <h2 class="about-title">Introduction</h2>
 
   <!-- About Text container -->
   <div class="about-text-container">
-    <p class="about-text">I'm currently pursuing a role in web development as a front end developer. I graduated 
-      from the University of Louisville with a Bachelor of Science in Business Administration, majoring in 
-      Computer Information Systems. While pursuing my degree, I was able to complete courses in software 
-      development, database design, network security, and more. Through these courses, I was able to work with a
-      non-profit organization while creating a website, develop applications using C#, manage databases with 
-      SQL, and more. I'm currently using HTML, CSS, and Javascript to build personal projects such as my portfolio,
-      and plan on learning additional skills as I pursue a front end position.</p>
+    <p class="about-text">I graduated from the University of Louisville with a Bachelor of Science in Business Administration,
+    majoring in Computer Information Systems. While pursuing my degree, I was able to complete courses in software 
+    development, database design, network security, and more. Through these courses, I was able to work with a
+    non-profit organization while creating a website, develop applications using C#, manage databases with 
+    SQL, and more. I'm currently using HTML, CSS, and Javascript to build personal projects such as my portfolio,
+    and plan on learning additional skills as I pursue a front end position.</p>
   </div>
 
   <!-- Technical Skills -->
@@ -58,7 +58,6 @@
     <h2 class="about-skills-title">Technical Skills</h2>
     <!-- Skills Container -->
     <div class="about-skills-container">
-      
       <!-- Box 1 (Languages)-->
       <div class="about-skill-box">
         <!-- Skill Header/Category -->
@@ -79,15 +78,24 @@
         <h3 class="skill-category">Applications</h3>
         <!-- Skills list -->
         <ul class="about-skills-list">
-          <li>Visual Studio Code</li>
-          <li>Git</li>
-          <li>Github</li>  
+          <li>Visual Studio Code</li> 
           <li>Microsoft Office</li>
           <li>Salesforce</li>
         </ul>
       </div>
 
-      <!--Box 3 (Database tools)-->
+      <!-- Box 3 (Version Control) -->
+      <div class="about-skill-box">
+        <!-- Skill Header/Category -->
+        <h3 class="skill-category">Version Control</h3>
+        <!-- Skills list -->
+        <ul class="about-skills-list">
+          <li>Git</li>
+          <li>Github</li>  
+        </ul>
+      </div>
+
+      <!--Box 4 (Database tools)-->
       <div class="about-skill-box">
         <!-- Skill Header/Category -->
         <h3 class="skill-category">Database Tools</h3>
@@ -100,9 +108,47 @@
     </div>
   </div>
 
+  <!-- Call to action -->
+  <div class="call-to-action">
+    <!-- Call to action container that places text on the left and button on the right -->
+    <div class="call-to-action-container">
+      <!-- Call to action text -->
+      <p class="call-to-action-text">Feel free to reach out for <span class="call-to-action-black">more information!</span></p>
+      <!-- Call to action button container -->
+      <div class="call-to-action-button-container">
+        <a href="menu-pages/contact.html" class="call-to-action-buton">Get in touch</a>
+      </div>
+    </div>
+  </div>
+
   <!--Footer-->
   <footer class="footer">
-    <p class="footer-text">Copyright &copy; WilliamBell</p>
+    <!-- Footer flex container holding 3 columns -->
+    <div class="footer-container">
+      <!-- Footer column 1 (Logo)-->
+      <div class="footer-column footer-column-1">
+        <h3 class="footer-logo"><a href="#" class="footer-logo-link">William Bell</a></h3>
+      </div>
+
+      <!-- Footer column 2 (Location)-->
+      <div class="footer-column footer-column-2">
+        <ul class="footer-list">
+          <li class="footer-list-li">Louisville, Kentucky</li>
+          <li class="footer-list-li">United States</li>
+          <li class="footer-list-li">502-229-0288</li>
+        </ul>
+      </div>
+
+      <!-- Footer column 3 (Contact information)-->
+      <div class="footer-column footer-column-3">
+        <ul class="footer-list">
+          <li class="footer-list-li">Email & Github</li>
+          <li class="footer-list-li">wtbell4080@gmail.com</li>
+          <li class="footer-list-li">github.com/wtbell01</li>
+        </ul>
+      </div>
+    </div>
   </footer>
+  
 </body>
 </html>
