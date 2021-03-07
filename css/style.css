@@ -21,6 +21,7 @@ body{
 }
 
 :root{
+  --black: #18181a;
   --dark-black: #000000;
   --light-black: #0d0c22;
   --dark-slate-gray: #464646;
@@ -239,7 +240,7 @@ li{
   width: 50%;
   margin: 0 auto;
   padding-top: .5rem ;
-  border-bottom: solid var(--red) 3px;
+  border-bottom: solid var(--light-blue) 3px;
 }
 
 /* View all link to the right of each section title */
@@ -338,92 +339,67 @@ li{
   font-size: 1rem;
 }
 
-/*Resume Section*/
-.home-resume-section{
+/* Call to action */
+.call-to-action{
+  background-color: var(--light-blue);
+}
+
+/* Call to action container that places text on the left and button on the right */
+.call-to-action-container{
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: var(--light-grey);
-  padding-bottom: 6rem;
-}
-
-/*Resume font awesome icon*/
-.home-resume-icon-container i{
-  font-size: 8rem;
-  margin: 2rem 0;
-  color: var(--dark-grey);
-}
-
-.home-resume-text-container{
-  color: var(--dark-grey);
-}
-
-.home-resume-big-text{
-  font-size: 1.8rem;
-  margin-bottom: 1.4rem;
-}
-
-.home-resume-small-text{
-  font-size: 1.3rem;
-  margin-bottom: .8rem;
-}
-
-.home-resume-button{
-  display: inline-block;
-  margin: 1rem auto 0 auto;
-  background-color: var(--dark-grey);
-}
-
-/*Requirement Documentation Section*/
-.home-requirement-container{
-  display: flex;
-  justify-content: space-between;
-  width: 95%;
-  margin: 3rem auto 9rem auto;
-}
-
-/*Individual requirement box*/
-.home-requirement-box{
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 3rem;
-  border: solid var(--medium-grey) thin;
-  box-shadow: 0 0 4px var(--medium-grey);
-  color: var(--slate-grey);
-}
-
-/*Icon inside each requirement box*/
-.home-requirement-box i{
-  font-size: 4.2rem;
-  margin-bottom: 1.15rem;
-}
-
-.home-requirement-box-title{
-  font-size: 1.4rem;
-  margin-bottom: .6rem;
-}
-
-.home-requirement-description{
   width: 70%;
-  margin: 1.2rem auto 1.95rem auto;
-  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 3.5rem 0;
 }
 
-.home-requirement-button{
-  background-color: var(--slate-grey);
-  border-radius: 10px;
-  padding: .35rem 1.25rem;
-  font-size: 1rem;
+.call-to-action-text{
+  font-weight: bold;
+  color: var(--white);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-right: 2rem;
+}
+
+.call-to-action-buton{
+  color: var(--white);
+  background-color: var(--black);
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+}
+
+.call-to-action-black{
+  color: var(--black);
 }
 
 /*Footer*/
 .footer{
-  text-align: center;
-  background-color: var(--slate-grey);
+  background-color: var(--dark-grey);
   color: var(--white);
-  padding: .5rem 0;
+  padding: 2rem 0;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.footer-column{
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo-link{
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.footer-list-li{
+  text-transform: uppercase;
 }
 
 /*Media queries for home page/index.html*/
