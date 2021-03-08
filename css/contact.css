@@ -1,20 +1,16 @@
 :root{
   --black: #18181a;
-  --dark-black: #000000;
   --light-black: #0d0c22;
   --dark-slate-gray: #464646;
-  --new-gray:#6e6d7a;
+  --dark-gray:#333333;
+  --slate-gray:#373939;
   --medium-dark-gray: #575757;
-  --slate-grey:#373939;
-  --dark-grey:#333333;
   --medium-gray:#e1e4e8;
   --medium-light-gray: #cccccc;
   --light-gray:#f2f2f2;
-  --light-grey:#f7f7f7;
+  --whitesmoke:#f7f7f7;
   --white:#fff;
   --light-blue: #6abecd;
-  --dark-blue:#337ab7;
-  --red:#eb5352;
 }
 
 /*Showcase*/
@@ -60,7 +56,7 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
-  color: var(--dark-grey);
+  color: var(--dark-gray);
   margin: 3rem 0;
   letter-spacing: .05rem;
 }
@@ -90,7 +86,7 @@
 
 .personal-contact-box i{
   font-size: 2.5rem;
-  color: var(--slate-grey);
+  color: var(--slate-gray);
   margin-bottom: 2rem;
 }
 
@@ -98,12 +94,12 @@
   font-size: 1rem;
   font-style: italic;
   margin-bottom: .5rem;
-  color: var(--slate-grey);
+  color: var(--slate-gray);
 }
 
 .personal-contact-info{
   font-size: 1rem;
-  color: var(--slate-grey);
+  color: var(--slate-gray);
 }
 
 /*Contact Form*/

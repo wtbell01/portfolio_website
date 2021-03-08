@@ -23,20 +23,16 @@ body{
 
 :root{
   --black: #18181a;
-  --dark-black: #000000;
   --light-black: #0d0c22;
   --dark-slate-gray: #464646;
-  --new-gray:#6e6d7a;
   --medium-dark-gray: #575757;
-  --slate-grey:#373939;
-  --dark-grey:#333333;
+  --slate-gray:#373939;
+  --dark-gray:#333333;
   --medium-gray:#e1e4e8;
   --light-gray:#f2f2f2;
-  --light-grey:#f7f7f7;
+  --whitesmoke:#f7f7f7;
   --white:#fff;
   --light-blue: #6abecd;
-  --dark-blue:#337ab7;
-  --red:#eb5352;
 }
 
 a{
@@ -208,7 +204,7 @@ li{
 
 /* View all link to the right of each section title */
 .home-link{
-  border: solid var(--slate-grey) thin;
+  border: solid var(--slate-gray) thin;
   text-transform: uppercase;
   padding: 0.75rem 1.5rem;
   color: #333333;
@@ -294,7 +290,7 @@ li{
 
 .home-project-button{
   text-transform: uppercase;
-  color: var(--slate-grey);
+  color: var(--slate-gray);
   background-color: var(--white);
   border: solid var(--white) thin;
   border-radius: 4px;
@@ -339,7 +335,7 @@ li{
 
 /*Footer*/
 .footer{
-  background-color: var(--dark-grey);
+  background-color: var(--dark-gray);
   color: var(--white);
   padding: 2rem 0;
 }
