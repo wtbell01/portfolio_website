@@ -43,12 +43,6 @@ li{
   list-style: none;
 }
 
-/*Button*/
-.button{
-  transition-duration: .2s;
-  transition-timing-function: ease-in-out;
-}
-
 /* Header - top set to 1.85rem to place header directly beneath the banner on scroll down */
 .header{
   position: sticky;
@@ -297,6 +291,14 @@ li{
   padding: .35rem .95rem;
   font-size: 1rem;
   letter-spacing: 0.05rem;
+}
+
+.home-project-button:hover{
+  color: var(--white);
+  background-color: var(--light-blue);
+  border: solid var(--light-blue) thin;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
 }
 
 /* Call to action */
