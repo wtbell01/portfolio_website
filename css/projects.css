@@ -163,6 +163,8 @@
 .project-image-button:hover{
   background-color: var(--light-blue);
   color: var(--white);
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
 }
 
 /* Project Description Side */
