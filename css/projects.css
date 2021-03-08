@@ -81,7 +81,7 @@
   display: grid;
   grid-template-columns: repeat(2,1fr);
   align-items: center;
-  width: 90%;
+  width: 95%;
   margin: 4rem auto 8rem auto;
 }
 
@@ -221,7 +221,7 @@
 }
 
 
-@media(max-width:1200px){
+@media(max-width:1300px){
   /* Project container - grid display with 1 column */
   .projects-container{
     display: grid;
@@ -234,14 +234,10 @@
     height: 65vh;
   }
 
-  
-
   .project-image-text-title{
     font-size: 1.8rem;
   }
 
-  
- 
 }
 
 
@@ -313,13 +309,6 @@
     font-size: 0.9rem;
     line-height: 1.3rem;
   }
-  
-}
-
-
-
-@media(max-width:375px){
-  
 }
 
 
@@ -327,5 +316,4 @@
   .project-image-container{
     height: 32vh;
   }
-
 }
